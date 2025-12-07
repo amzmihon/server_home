@@ -1,0 +1,648 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPS Hosting Plans - BAR & Associates</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/basket.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .region-btn.active {
+            background-color: #2563EB;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased" data-page="services" data-service="vps">
+
+    <div id="site-nav"></div>
+
+    <!-- Container for pricing content -->
+    <div class="container mx-auto px-4 py-12 md:py-20">
+
+        <!-- Header -->
+        <header class="text-center max-w-3xl mx-auto mb-12">
+            <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+                🌍 Global VPS Hosting
+            </h1>
+            <p class="text-lg text-gray-600">
+                High-performance KVM VPS with NVMe cached storage, full root access, and DDoS protection.
+            </p>
+        </header>
+
+        <!-- Region Switcher -->
+        <nav class="flex flex-wrap justify-center gap-2 mb-12">
+            <button id="btn-bd" class="region-btn active text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('bd')">
+                🇧🇩 Bangladesh (BDIX)
+            </button>
+            <button id="btn-uae" class="region-btn text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('uae')">
+                Middle East
+            </button>
+            <button id="btn-eu" class="region-btn text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('eu')">
+                🇪🇺 Europe
+            </button>
+            <button id="btn-us" class="region-btn text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('us')">
+                🇺🇸 United States
+            </button>
+            <button id="btn-asia" class="region-btn text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('asia')">
+                🌏 Asia
+            </button>
+            <button id="btn-africa" class="region-btn text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('africa')">
+                🌍 Africa
+            </button>
+        </nav>
+
+        <!-- Pricing Grid -->
+        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Plan 1: VPS-2G -->
+            <div id="plan-0" class="plan-card flex flex-col bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-xl">
+                <div class="p-8 flex-grow">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 0 1-3-3m3 3a3 3 0 0 0 3 3h7.5a3 3 0 0 0 3-3m-13.5 0v-4.5a3 3 0 0 1 3-3h7.5a3 3 0 0 1 3 3v4.5m-13.5 0a3 3 0 0 1-3-3m0 0v-4.5a3 3 0 0 1 3-3h7.5a3 3 0 0 1 3 3v4.5m0 0v-4.5a3 3 0 0 0-3-3h-7.5a3 3 0 0 0-3 3v4.5m13.5 0v-4.5a3 3 0 0 0-3-3h-7.5a3 3 0 0 0-3 3v4.5" /></svg>
+                        </div>
+                    </div>
+                    <h2 id="plan-0-name" class="text-2xl font-semibold text-center text-gray-900 mb-2">BDIX VPS-2G</h2>
+                    <div class="text-center mb-6">
+                        <span id="plan-0-price" class="text-4xl font-bold text-gray-900">৳1,250</span>
+                        <span class="text-gray-500">/mo</span>
+                    </div>
+                    <ul id="plan-0-features" class="space-y-3 mb-8"></ul>
+                </div>
+                <div class="p-6 bg-gray-50">
+                    <a href="#" class="block w-full text-center bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-md">Choose Plan &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Plan 2: VPS-4G -->
+            <div id="plan-1" class="plan-card flex flex-col bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-xl">
+                <div class="p-8 flex-grow">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 0 1-3-3m3 3a3 3 0 0 0 3 3h7.5a3 3 0 0 0 3-3m-13.5 0v-4.5a3 3 0 0 1 3-3h7.5a3 3 0 0 1 3 3v4.5m-13.5 0a3 3 0 0 1-3-3m0 0v-4.5a3 3 0 0 1 3-3h7.5a3 3 0 0 1 3 3v4.5m0 0v-4.5a3 3 0 0 0-3-3h-7.5a3 3 0 0 0-3 3v4.5" /></svg>
+                        </div>
+                    </div>
+                    <h2 id="plan-1-name" class="text-2xl font-semibold text-center text-gray-900 mb-2">BDIX VPS-4G</h2>
+                    <div class="text-center mb-6">
+                        <span id="plan-1-price" class="text-4xl font-bold text-gray-900">৳2,500</span>
+                        <span class="text-gray-500">/mo</span>
+                    </div>
+                    <ul id="plan-1-features" class="space-y-3 mb-8"></ul>
+                </div>
+                <div class="p-6 bg-gray-50">
+                    <a href="#" class="block w-full text-center bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-md">Choose Plan &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Plan 3: VPS-6G -->
+            <div id="plan-2" class="plan-card flex flex-col bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-xl">
+                <div class="p-8 flex-grow">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 0 1-3-3m3 3a3 3 0 0 0 3 3h7.5a3 3 0 0 0 3-3m-13.5 0v-4.5a3 3 0 0 1 3-3h7.5a3 3 0 0 1 3 3v4.5m-13.5 0a3 3 0 0 1-3-3m0 0v-4.5a3 3 0 0 1 3-3h7.5a3 3 0 0 1 3 3v4.5m0 0v-4.5a3 3 0 0 0-3-3h-7.5a3 3 0 0 0-3 3v4.5m13.5 0v-4.5a3 3 0 0 0-3-3h-7.5a3 3 0 0 0-3 3v4.5" /></svg>
+                        </div>
+                    </div>
+                    <h2 id="plan-2-name" class="text-2xl font-semibold text-center text-gray-900 mb-2">BDIX VPS-6G</h2>
+                    <div class="text-center mb-6">
+                        <span id="plan-2-price" class="text-4xl font-bold text-gray-900">৳3,750</span>
+                        <span class="text-gray-500">/mo</span>
+                    </div>
+                    <ul id="plan-2-features" class="space-y-3 mb-8"></ul>
+                </div>
+                <div class="p-6 bg-gray-50">
+                    <a href="#" class="block w-full text-center bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-md">Choose Plan &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Plan 4: VPS-8G (Popular) -->
+            <div id="plan-3" class="plan-card flex flex-col bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-xl ring-2 ring-blue-600 relative">
+                <div class="absolute top-0 right-0 -mt-3 mr-3">
+                    <span class="inline-flex items-center rounded-full bg-blue-600 px-3 py-1 text-sm font-medium text-white shadow-lg">POPULAR</span>
+                </div>
+                <div class="p-8 flex-grow">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 0 1-3-3m3 3a3 3 0 0 0 3 3h7.5a3 3 0 0 0 3-3m-13.5 0v-4.5a3 3 0 0 1 3-3h7.5a3 3 0 0 1 3 3v4.5m-13.5 0a3 3 0 0 1-3-3m0 0v-4.5a3 3 0 0 1 3-3h7.5a3 3 0 0 1 3 3v4.5m0 0v-4.5a3 3 0 0 0-3-3h-7.5a3 3 0 0 0-3 3v4.5m13.5 0v-4.5a3 3 0 0 0-3-3h-7.5a3 3 0 0 0-3 3v4.5" /></svg>
+                        </div>
+                    </div>
+                    <h2 id="plan-3-name" class="text-2xl font-semibold text-center text-gray-900 mb-2">BDIX VPS-8G</h2>
+                    <div class="text-center mb-6">
+                        <span id="plan-3-price" class="text-4xl font-bold text-gray-900">৳5,000</span>
+                        <span class="text-gray-500">/mo</span>
+                    </div>
+                    <ul id="plan-3-features" class="space-y-3 mb-8"></ul>
+                </div>
+                <div class="p-6 bg-gray-50">
+                    <a href="#" class="block w-full text-center bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-md">Choose Plan &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Plan 5: VPS-16G -->
+            <div id="plan-4" class="plan-card flex flex-col bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-xl">
+                <div class="p-8 flex-grow">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 0 1-3-3m3 3a3 3 0 0 0 3 3h7.5a3 3 0 0 0 3-3m-13.5 0v-4.5a3 3 0 0 1 3-3h7.5a3 3 0 0 1 3 3v4.5m-13.5 0a3 3 0 0 1-3-3m0 0v-4.5a3 3 0 0 1 3-3h7.5a3 3 0 0 1 3 3v4.5m0 0v-4.5a3 3 0 0 0-3-3h-7.5a3 3 0 0 0-3 3v4.5m13.5 0v-4.5a3 3 0 0 0-3-3h-7.5a3 3 0 0 0-3 3v4.5" /></svg>
+                        </div>
+                    </div>
+                    <h2 id="plan-4-name" class="text-2xl font-semibold text-center text-gray-900 mb-2">BDIX VPS-16G</h2>
+                    <div class="text-center mb-6">
+                        <span id="plan-4-price" class="text-4xl font-bold text-gray-900">৳7,500</span>
+                        <span class="text-gray-500">/mo</span>
+                    </div>
+                    <ul id="plan-4-features" class="space-y-3 mb-8"></ul>
+                </div>
+                <div class="p-6 bg-gray-50">
+                    <a href="#" class="block w-full text-center bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-md">Choose Plan &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Plan 6: VPS-32G -->
+            <div id="plan-5" class="plan-card flex flex-col bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-xl">
+                <div class="p-8 flex-grow">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 0 1-3-3m3 3a3 3 0 0 0 3 3h7.5a3 3 0 0 0 3-3m-13.5 0v-4.5a3 3 0 0 1 3-3h7.5a3 3 0 0 1 3 3v4.5m-13.5 0a3 3 0 0 1-3-3m0 0v-4.5a3 3 0 0 1 3-3h7.5a3 3 0 0 1 3 3v4.5m0 0v-4.5a3 3 0 0 0-3-3h-7.5a3 3 0 0 0-3 3v4.5m13.5 0v-4.5a3 3 0 0 0-3-3h-7.5a3 3 0 0 0-3 3v4.5" /></svg>
+                        </div>
+                    </div>
+                    <h2 id="plan-5-name" class="text-2xl font-semibold text-center text-gray-900 mb-2">BDIX VPS-32G</h2>
+                    <div class="text-center mb-6">
+                        <span id="plan-5-price" class="text-4xl font-bold text-gray-900">৳11,250</span>
+                        <span class="text-gray-500">/mo</span>
+                    </div>
+                    <ul id="plan-5-features" class="space-y-3 mb-8"></ul>
+                </div>
+                <div class="p-6 bg-gray-50">
+                    <a href="#" class="block w-full text-center bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-md">Choose Plan &rarr;</a>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Custom VPS Builder -->
+        <div class="max-w-7xl mx-auto px-4 py-8 sm:py-12">
+            <div class="text-center mb-6 sm:mb-8">
+                <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-2">🛠️ Build Your Custom VPS Plan</h2>
+                <p class="text-sm sm:text-base text-gray-600">Configure server resources according to your specific requirements</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Custom VPS Resources -->
+                <div class="lg:col-span-2">
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-4 sm:p-6">
+                        <h3 class="text-base sm:text-lg font-semibold text-gray-900 mb-4 sm:mb-6">Configure Server Resources</h3>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                            <!-- CPU Cores -->
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">CPU Cores</label>
+                                <div class="flex items-center space-x-2">
+                                    <input type="range" id="cpu-range" min="1" max="32" value="2" class="flex-1">
+                                    <input type="number" id="cpu-input" min="1" max="32" value="2" class="w-16 px-2 py-1 text-sm border border-gray-300 rounded">
+                                    <span class="text-sm font-medium w-12">Cores</span>
+                                </div>
+                                <div class="text-xs text-gray-500">Base: 1 Core, Price: ৳200/Core</div>
+                            </div>
+
+                            <!-- CPU Threads -->
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">CPU Threads</label>
+                                <div class="flex items-center space-x-2">
+                                    <input type="range" id="threads-range" min="1" max="64" value="4" class="flex-1">
+                                    <input type="number" id="threads-input" min="1" max="64" value="4" class="w-16 px-2 py-1 text-sm border border-gray-300 rounded">
+                                    <span class="text-sm font-medium w-16">Threads</span>
+                                </div>
+                                <div class="text-xs text-gray-500">Base: 2 Threads, Price: ৳100/Thread</div>
+                            </div>
+
+                            <!-- RAM -->
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">RAM Memory</label>
+                                <div class="flex items-center space-x-2">
+                                    <input type="range" id="ram-range" min="1" max="128" value="4" class="flex-1">
+                                    <input type="number" id="ram-input" min="1" max="128" value="4" class="w-16 px-2 py-1 text-sm border border-gray-300 rounded">
+                                    <span class="text-sm font-medium w-8">GB</span>
+                                </div>
+                                <div class="text-xs text-gray-500">Base: 1GB, Price: ৳150/GB</div>
+                            </div>
+
+                            <!-- SSD Storage -->
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">SSD Storage</label>
+                                <div class="flex items-center space-x-2">
+                                    <input type="range" id="vps-ssd-range" min="20" max="2000" value="50" step="10" class="flex-1">
+                                    <input type="number" id="vps-ssd-input" min="20" max="2000" value="50" step="10" class="w-16 px-2 py-1 text-sm border border-gray-300 rounded">
+                                    <span class="text-sm font-medium w-8">GB</span>
+                                </div>
+                                <div class="text-xs text-gray-500">Base: 20GB, Price: ৳5/GB</div>
+                            </div>
+
+                            <!-- Bandwidth -->
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Bandwidth</label>
+                                <div class="flex items-center space-x-2">
+                                    <input type="range" id="vps-bandwidth-range" min="1" max="50" value="2" class="flex-1">
+                                    <input type="number" id="vps-bandwidth-input" min="1" max="50" value="2" class="w-16 px-2 py-1 text-sm border border-gray-300 rounded">
+                                    <span class="text-sm font-medium w-8">TB</span>
+                                </div>
+                                <div class="text-xs text-gray-500">Base: 1TB, Price: ৳100/TB</div>
+                            </div>
+                        </div>
+
+                        <!-- VPS Features -->
+                        <div class="mt-6 sm:mt-8">
+                            <h4 class="text-sm sm:text-md font-medium text-gray-900 mb-3 sm:mb-4">VPS Features & Services</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+                                <div class="space-y-3">
+                                    <label class="flex items-center space-x-3 p-2 sm:p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="os-reinstall" class="vps-feature" data-price="0">
+                                        <span class="flex-1 text-sm sm:text-base">Free OS Reinstall</span>
+                                        <span class="text-green-600 font-medium text-sm sm:text-base">Free</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-2 sm:p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="ssh-access" class="vps-feature" data-price="0">
+                                        <span class="flex-1 text-sm sm:text-base">Free SSH Access</span>
+                                        <span class="text-green-600 font-medium text-sm sm:text-base">Free</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-2 sm:p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="root-access" class="vps-feature" data-price="0">
+                                        <span class="flex-1 text-sm sm:text-base">Full Root Access</span>
+                                        <span class="text-green-600 font-medium text-sm sm:text-base">Free</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-2 sm:p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="firewall" class="vps-feature" data-price="100">
+                                        <span class="flex-1 text-sm sm:text-base">Advanced Firewall</span>
+                                        <span class="text-blue-600 font-medium text-sm sm:text-base">৳100</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-2 sm:p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="monitoring" class="vps-feature" data-price="150">
+                                        <span class="flex-1 text-sm sm:text-base">Server Monitoring</span>
+                                        <span class="text-blue-600 font-medium text-sm sm:text-base">৳150</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-2 sm:p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="daily-backup" class="vps-feature" data-price="200">
+                                        <span class="flex-1 text-sm sm:text-base">Daily Backup Service</span>
+                                        <span class="text-blue-600 font-medium text-sm sm:text-base">৳200</span>
+                                    </label>
+                                </div>
+                                <div class="space-y-3">
+                                    <label class="flex items-center space-x-3 p-2 sm:p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="vpn-connection" class="vps-feature" data-price="125">
+                                        <span class="flex-1 text-sm sm:text-base">End-to-End Encrypted VPN</span>
+                                        <span class="text-blue-600 font-medium text-sm sm:text-base">৳125</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-2 sm:p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="ddos-protection" class="vps-feature" data-price="200">
+                                        <span class="flex-1 text-sm sm:text-base">Advanced DDoS Protection</span>
+                                        <span class="text-blue-600 font-medium text-sm sm:text-base">৳200</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-2 sm:p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="auto-backup" class="vps-feature" data-price="250">
+                                        <span class="flex-1 text-sm sm:text-base">Automated Daily Backup</span>
+                                        <span class="text-blue-600 font-medium text-sm sm:text-base">৳250</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-2 sm:p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="public-ip" class="vps-feature" data-price="300">
+                                        <span class="flex-1 text-sm sm:text-base">Dedicated Public IP</span>
+                                        <span class="text-blue-600 font-medium text-sm sm:text-base">৳300</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-2 sm:p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="vps-priority-support" class="vps-feature" data-price="300">
+                                        <span class="flex-1 text-sm sm:text-base">24/7 Priority Support</span>
+                                        <span class="text-blue-600 font-medium text-sm sm:text-base">৳300</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-2 sm:p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="managed-service" class="vps-feature" data-price="500">
+                                        <span class="flex-1 text-sm sm:text-base">Managed VPS Service</span>
+                                        <span class="text-blue-600 font-medium text-sm sm:text-base">৳500</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom VPS Summary -->
+                <div>
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-4 sm:p-6 lg:sticky lg:top-24">
+                        <h4 class="text-base sm:text-lg font-semibold text-gray-900 mb-3 sm:mb-4">Custom VPS Summary</h4>
+                        
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span>CPU Cores:</span>
+                                <span id="summary-cpu" class="font-medium">2 Cores</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>CPU Threads:</span>
+                                <span id="summary-threads" class="font-medium">4 Threads</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>RAM Memory:</span>
+                                <span id="summary-ram" class="font-medium">4 GB</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>SSD Storage:</span>
+                                <span id="summary-vps-ssd" class="font-medium">50 GB</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Bandwidth:</span>
+                                <span id="summary-vps-bandwidth" class="font-medium">2 TB</span>
+                            </div>
+                        </div>
+
+                        <hr class="my-4">
+                        
+                        <div id="vps-features-list" class="space-y-2 text-sm">
+                            <div class="text-gray-500 text-center">No additional features selected</div>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-sm">
+                                <span>Base Resources:</span>
+                                <span id="vps-base-cost" class="font-medium">৳0</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span>Additional Features:</span>
+                                <span id="vps-features-cost" class="font-medium">৳0</span>
+                            </div>
+                            <div class="flex justify-between items-center pt-2 border-t">
+                                <span class="font-semibold">Monthly Total:</span>
+                                <span id="vps-custom-total" class="font-bold text-lg text-blue-600">৳0</span>
+                            </div>
+                        </div>
+
+                        <button id="addCustomVPS" class="w-full bg-blue-600 text-white py-2 sm:py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors mt-4 sm:mt-6 text-sm sm:text-base">
+                            Add Custom VPS to Basket
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+        <div id="site-footer"></div>
+
+    <!-- Pricing Page Script -->
+    <script>
+        const planData = {
+            'bd': {
+                currency: '৳',
+                plans: [
+                    { name: 'BDIX VPS-2G', price: '1,250', features: ['1 vCPU', '2 GB RAM', '25 GB SSD', '1 TB Bandwidth', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] },
+                    { name: 'BDIX VPS-4G', price: '2,500', features: ['2 vCPU', '4 GB RAM', '50 GB SSD', '2 TB Bandwidth', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] },
+                    { name: 'BDIX VPS-6G', price: '3,750', features: ['4 vCPU', '6 GB RAM', '75 GB SSD', '3 TB Bandwidth', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] },
+                    { name: 'BDIX VPS-8G', price: '5,000', features: ['6 vCPU', '8 GB RAM', '100 GB SSD', '4 TB Bandwidth', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] },
+                    { name: 'BDIX VPS-16G', price: '7,500', features: ['8 vCPU', '16 GB RAM', '150 GB SSD', '4 TB Bandwidth', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] },
+                    { name: 'BDIX VPS-32G', price: '11,250', features: ['12 vCPU', '32 GB RAM', '300 GB SSD', '6 TB Bandwidth', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] }
+                ]
+            },
+            'uae': {
+                currency: 'AED ',
+                plans: [
+                    { name: 'UAE VPS-2G', price: '29', features: ['1 vCPU', '2 GB RAM', '25 GB SSD', '1 TB Bandwidth', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] },
+                    { name: 'UAE VPS-4G', price: '59', features: ['2 vCPU', '4 GB RAM', '50 GB SSD', '2 TB Bandwidth', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] },
+                    { name: 'UAE VPS-6G', price: '89', features: ['4 vCPU', '6 GB RAM', '75 GB SSD', '3 TB Bandwidth', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] },
+                    { name: 'UAE VPS-8G', price: '119', features: ['6 vCPU', '8 GB RAM', '100 GB SSD', '4 TB Bandwidth', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] },
+                    { name: 'UAE VPS-16G', price: '179', features: ['8 vCPU', '16 GB RAM', '150 GB SSD', '4 TB Bandwidth', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] },
+                    { name: 'UAE VPS-32G', price: '349', features: ['12 vCPU', '32 GB RAM', '300 GB SSD', '6 TB Bandwidth', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] }
+                ]
+            },
+            'eu': {
+                currency: '€',
+                plans: [
+                    { name: 'EU VPS-2G', price: '9.99', features: ['1 vCPU', '2 GB RAM', '25 GB SSD', '1 TB BW', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] },
+                    { name: 'EU VPS-4G', price: '14.99', features: ['2 vCPU', '4 GB RAM', '50 GB SSD', '2 TB BW', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] },
+                    { name: 'EU VPS-6G', price: '19.99', features: ['4 vCPU', '6 GB RAM', '75 GB SSD', '3 TB BW', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] },
+                    { name: 'EU VPS-8G', price: '29.99', features: ['6 vCPU', '8 GB RAM', '100 GB SSD', '4 TB BW', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] },
+                    { name: 'EU VPS-16G', price: '49.99', features: ['8 vCPU', '16 GB RAM', '150 GB SSD', '4 TB BW', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] },
+                    { name: 'EU VPS-32G', price: '79.99', features: ['12 vCPU', '32 GB RAM', '300 GB SSD', '6 TB BW', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] }
+                ]
+            },
+            'us': {
+                currency: '$',
+                plans: [
+                    { name: 'US VPS-2G', price: '8.99', features: ['1 vCPU', '2 GB RAM', '25 GB SSD', '1 TB BW', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] },
+                    { name: 'US VPS-4G', price: '14.99', features: ['2 vCPU', '4 GB RAM', '50 GB SSD', '2 TB BW', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] },
+                    { name: 'US VPS-6G', price: '19.99', features: ['4 vCPU', '6 GB RAM', '75 GB SSD', '3 TB BW', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] },
+                    { name: 'US VPS-8G', price: '29.99', features: ['6 vCPU', '8 GB RAM', '100 GB SSD', '4 TB BW', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] },
+                    { name: 'US VPS-16G', price: '49.99', features: ['8 vCPU', '16 GB RAM', '150 GB SSD', '4 TB BW', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] },
+                    { name: 'US VPS-32G', price: '79.99', features: ['12 vCPU', '32 GB RAM', '300 GB SSD', '6 TB BW', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] }
+                ]
+            },
+            'asia': {
+                currency: '$',
+                plans: [
+                    { name: 'Asia VPS-2G', price: '7.99', features: ['1 vCPU', '2 GB RAM', '25 GB SSD', '1 TB BW', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] },
+                    { name: 'Asia VPS-4G', price: '12.99', features: ['2 vCPU', '4 GB RAM', '50 GB SSD', '2 TB BW', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] },
+                    { name: 'Asia VPS-6G', price: '17.99', features: ['4 vCPU', '6 GB RAM', '75 GB SSD', '3 TB BW', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] },
+                    { name: 'Asia VPS-8G', price: '24.99', features: ['6 vCPU', '8 GB RAM', '100 GB SSD', '4 TB BW', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] },
+                    { name: 'Asia VPS-16G', price: '39.99', features: ['8 vCPU', '16 GB RAM', '150 GB SSD', '4 TB BW', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] },
+                    { name: 'Asia VPS-32G', price: '69.99', features: ['12 vCPU', '32 GB RAM', '300 GB SSD', '6 TB BW', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] }
+                ]
+            },
+            'africa': {
+                currency: '$',
+                plans: [
+                    { name: 'Africa VPS-2G', price: '9.50', features: ['1 vCPU', '2 GB RAM', '25 GB SSD', '800 GB BW', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] },
+                    { name: 'Africa VPS-4G', price: '16.50', features: ['2 vCPU', '4 GB RAM', '50 GB SSD', '1.5 TB BW', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] },
+                    { name: 'Africa VPS-6G', price: '22.90', features: ['4 vCPU', '6 GB RAM', '75 GB SSD', '2 TB BW', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] },
+                    { name: 'Africa VPS-8G', price: '32.90', features: ['6 vCPU', '8 GB RAM', '100 GB SSD', '3 TB BW', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] },
+                    { name: 'Africa VPS-16G', price: '54.90', features: ['8 vCPU', '16 GB RAM', '150 GB SSD', '4 TB BW', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] },
+                    { name: 'Africa VPS-32G', price: '89.90', features: ['12 vCPU', '32 GB RAM', '300 GB SSD', '6 TB BW', 'Full Root Access', 'KVM (Proxmox)', 'NVMe Cached', 'DDoS Protection', 'Free OS Reinstall', 'SSH Access', '24/7 Support'] }
+                ]
+            }
+        };
+
+        function createFeatureHTML(feature) {
+            return `
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 text-green-500 mr-2.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-gray-700">${feature}</span>
+                </li>
+            `;
+        }
+
+        let currentRegion = 'bd';
+        let selectedPlan = null;
+
+        function showRegion(regionKey) {
+            const regionData = planData[regionKey];
+            if (!regionData) return;
+
+            regionData.plans.forEach((plan, index) => {
+                const nameEl = document.getElementById(`plan-${index}-name`);
+                const priceEl = document.getElementById(`plan-${index}-price`);
+                const featuresList = document.getElementById(`plan-${index}-features`);
+
+                if (!nameEl || !priceEl || !featuresList) return;
+
+                nameEl.textContent = plan.name;
+                priceEl.textContent = regionData.currency + plan.price;
+                featuresList.innerHTML = '';
+                plan.features.forEach(feature => {
+                    featuresList.innerHTML += createFeatureHTML(feature);
+                });
+            });
+
+            const buttons = document.querySelectorAll('.region-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            const activeBtn = document.getElementById(`btn-${regionKey}`);
+            if (activeBtn) activeBtn.classList.add('active');
+
+            currentRegion = regionKey;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showRegion('bd');
+            
+            // Make plan cards clickable for selection
+            document.querySelectorAll('.plan-card').forEach((card) => {
+                card.addEventListener('click', () => {
+                    document.querySelectorAll('.plan-card').forEach(c => c.classList.remove('ring-2', 'ring-blue-500'));
+                    card.classList.add('ring-2', 'ring-blue-500');
+                    selectedPlan = {
+                        name: card.querySelector('h2').textContent,
+                        price: card.querySelector('[id$="-price"]').textContent
+                    };
+                });
+            });
+
+            // Custom VPS Builder functionality
+            function updateCustomVPS() {
+                const regionData = planData[currentRegion];
+                const currency = regionData.currency;
+                
+                const cpu = parseInt(document.getElementById('cpu-range').value);
+                const threads = parseInt(document.getElementById('threads-range').value);
+                const ram = parseInt(document.getElementById('ram-range').value);
+                const ssd = parseInt(document.getElementById('vps-ssd-range').value);
+                const bandwidth = parseInt(document.getElementById('vps-bandwidth-range').value);
+                
+                document.getElementById('cpu-input').value = cpu;
+                document.getElementById('threads-input').value = threads;
+                document.getElementById('ram-input').value = ram;
+                document.getElementById('vps-ssd-input').value = ssd;
+                document.getElementById('vps-bandwidth-input').value = bandwidth;
+                
+                document.getElementById('summary-cpu').textContent = cpu + (cpu === 1 ? ' Core' : ' Cores');
+                document.getElementById('summary-threads').textContent = threads + (threads === 1 ? ' Thread' : ' Threads');
+                document.getElementById('summary-ram').textContent = ram + ' GB';
+                document.getElementById('summary-vps-ssd').textContent = ssd + ' GB';
+                document.getElementById('summary-vps-bandwidth').textContent = bandwidth + ' TB';
+                
+                let baseCost = 500;
+                baseCost += (cpu - 1) * 200;
+                baseCost += Math.max(0, (threads - 2)) * 100;
+                baseCost += (ram - 1) * 150;
+                baseCost += Math.max(0, (ssd - 20)) * 5;
+                baseCost += (bandwidth - 1) * 100;
+                
+                let featuresCost = 0;
+                const featuresList = [];
+                document.querySelectorAll('.vps-feature:checked').forEach(feature => {
+                    const price = parseInt(feature.dataset.price);
+                    featuresCost += price;
+                    const label = feature.parentElement.querySelector('span').textContent;
+                    if (price > 0) {
+                        featuresList.push(`<div class="flex justify-between"><span>${label}</span><span>${currency}${price}</span></div>`);
+                    } else {
+                        featuresList.push(`<div class="flex justify-between"><span>${label}</span><span class="text-green-600">Free</span></div>`);
+                    }
+                });
+                
+                document.getElementById('vps-base-cost').textContent = currency + baseCost;
+                document.getElementById('vps-features-cost').textContent = currency + featuresCost;
+                document.getElementById('vps-custom-total').textContent = currency + (baseCost + featuresCost);
+                
+                const featuresListEl = document.getElementById('vps-features-list');
+                if (featuresList.length > 0) {
+                    featuresListEl.innerHTML = featuresList.join('');
+                } else {
+                    featuresListEl.innerHTML = '<div class="text-gray-500 text-center">No additional features selected</div>';
+                }
+            }
+            
+            document.querySelectorAll('#cpu-range, #threads-range, #ram-range, #vps-ssd-range, #vps-bandwidth-range').forEach(slider => {
+                slider.addEventListener('input', updateCustomVPS);
+            });
+            
+            document.getElementById('cpu-input').addEventListener('input', function() {
+                document.getElementById('cpu-range').value = this.value;
+                updateCustomVPS();
+            });
+            document.getElementById('threads-input').addEventListener('input', function() {
+                document.getElementById('threads-range').value = this.value;
+                updateCustomVPS();
+            });
+            document.getElementById('ram-input').addEventListener('input', function() {
+                document.getElementById('ram-range').value = this.value;
+                updateCustomVPS();
+            });
+            document.getElementById('vps-ssd-input').addEventListener('input', function() {
+                document.getElementById('vps-ssd-range').value = this.value;
+                updateCustomVPS();
+            });
+            document.getElementById('vps-bandwidth-input').addEventListener('input', function() {
+                document.getElementById('vps-bandwidth-range').value = this.value;
+                updateCustomVPS();
+            });
+            
+            document.querySelectorAll('.vps-feature').forEach(checkbox => {
+                checkbox.addEventListener('change', updateCustomVPS);
+            });
+            
+            // Auto-sort features by price (free items first)
+            function sortFeaturesByPrice() {
+                const containers = document.querySelectorAll('.grid.grid-cols-1.md\\:grid-cols-2 .space-y-3');
+                containers.forEach(container => {
+                    const labels = Array.from(container.querySelectorAll('label'));
+                    labels.sort((a, b) => {
+                        const priceA = parseInt(a.querySelector('input').dataset.price || '0');
+                        const priceB = parseInt(b.querySelector('input').dataset.price || '0');
+                        return priceA - priceB;
+                    });
+                    labels.forEach(label => container.appendChild(label));
+                });
+            }
+            sortFeaturesByPrice();
+            
+            document.getElementById('addCustomVPS').addEventListener('click', () => {
+                const customVPSPlan = {
+                    id: 'custom-vps-' + Date.now(),
+                    name: 'Custom VPS Plan',
+                    type: 'Custom VPS Hosting',
+                    region: currentRegion,
+                    price: document.getElementById('vps-custom-total').textContent
+                };
+                
+                basket.addItem(customVPSPlan);
+            });
+            
+            updateCustomVPS();
+            
+            // Re-sort when region changes
+            const originalShowRegion = window.showRegion;
+            window.showRegion = function(regionKey) {
+                originalShowRegion(regionKey);
+                setTimeout(sortFeaturesByPrice, 10);
+            };
+        });
+    </script>
+
+    <script src="js/components.js"></script>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,663 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Custom Plans - BAR & Associates</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .soft-card { border-radius: 12px; border: 1px solid #e5e7eb; }
+    .qty-box { display: flex; align-items: center; gap: 8px; }
+    .btn-qty { background: #f3f4f6; border: 1px solid #d1d5db; border-radius: 6px; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+    .btn-qty:hover { background: #e5e7eb; }
+    .qty-val { min-width: 40px; text-align: center; font-weight: 500; }
+    .text-teal { color: #0d9488; }
+    .text-teal-600 { color: #0d9488; }
+    .group-card { transition: all 0.2s; }
+    .group-card.active { border-color: #0d9488; background: #f0fdfa; }
+    .chev-btn { background: none; border: none; padding: 4px; }
+    .chev { display: inline-block; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 6px solid #6b7280; transition: transform 0.2s; }
+    .chev-btn[aria-expanded="true"] .chev { transform: rotate(180deg); }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased" data-page="services" data-service="custom">
+
+    <div id="site-nav"></div>
+
+
+<main class="py-4">
+  <div class="container">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+        🛠️ Custom Plans
+      </h1>
+      <p class="text-lg text-gray-600">
+        Build your perfect hosting solution with our flexible customization options.
+      </p>
+    </div>
+
+    <!-- Location Selector -->
+    <div class="mb-3">
+      <label for="locationSelect" class="form-label">Location:</label>
+      <select id="locationSelect" class="form-select form-select-sm w-auto">
+        <option value="1" data-currency="BDT" selected>Bangladesh</option>
+        <option value="2" data-currency="AED">Dubai</option>
+        <option value="3" data-currency="USD">USA</option>
+        <option value="4" data-currency="EUR">France</option>
+        <option value="5" data-currency="SLE">Sierra Leone</option>
+      </select>
+    </div>
+
+    <div class="row g-4">
+      <!-- LEFT -->
+      <div class="col-lg-8">
+
+        <!-- Shared Hosting -->
+        <div class="card soft-card group-card mb-3" data-group="shared-hosting" data-category-name="Shared Hosting">
+          <div class="card-body">
+            <div class="d-flex align-items-center justify-content-between">
+              <label class="d-flex align-items-center gap-3 mb-0">
+                <input class="form-check-input group-check" type="checkbox">
+                <span class="h6 mb-0 fw-semibold text-teal">Shared Hosting</span>
+              </label>
+              <button class="chev-btn group-toggle" aria-expanded="false">
+                <span class="chev"></span>
+              </button>
+            </div>
+
+            <div class="group-body mt-3" style="display:none">
+              <div class="row gy-3">
+                <div class="col-12 d-flex align-items-center">
+                  <span class="text-teal-600 fw-medium">Storage</span>
+                  <div class="qty-box ms-auto" data-group="shared-hosting" data-key="storage" data-label="Storage" data-unit="GB" data-step="5" data-min="5" data-max="100" data-included="5" data-price-step-monthly="2">
+                    <button class="btn-qty" data-act="dec">−</button>
+                    <span class="qty-val">5</span><span class="qty-unit">GB</span>
+                    <button class="btn-qty" data-act="inc">+</button>
+                  </div>
+                </div>
+                <div class="col-12 d-flex align-items-center">
+                  <span class="text-teal-600 fw-medium">Bandwidth</span>
+                  <div class="qty-box ms-auto" data-group="shared-hosting" data-key="bandwidth" data-label="Bandwidth" data-unit="GB" data-step="50" data-min="50" data-max="1000" data-included="50" data-price-step-monthly="1">
+                    <button class="btn-qty" data-act="dec">−</button>
+                    <span class="qty-val">50</span><span class="qty-unit">GB</span>
+                    <button class="btn-qty" data-act="inc">+</button>
+                  </div>
+                </div>
+                <div class="col-12 d-flex align-items-center">
+                  <span class="text-teal-600 fw-medium">Websites</span>
+                  <div class="qty-box ms-auto" data-group="shared-hosting" data-key="websites" data-label="Websites" data-unit="site" data-step="1" data-min="1" data-max="10" data-included="1" data-price-step-monthly="5">
+                    <button class="btn-qty" data-act="dec">−</button>
+                    <span class="qty-val">1</span><span class="qty-unit">site</span>
+                    <button class="btn-qty" data-act="inc">+</button>
+                  </div>
+                </div>
+                <div class="col-12 d-flex align-items-center">
+                  <span class="text-teal-600 fw-medium">Email Accounts</span>
+                  <div class="qty-box ms-auto" data-group="shared-hosting" data-key="email" data-label="Email Accounts" data-unit="acc" data-step="5" data-min="5" data-max="100" data-included="5" data-price-step-monthly="1">
+                    <button class="btn-qty" data-act="dec">−</button>
+                    <span class="qty-val">5</span><span class="qty-unit">acc</span>
+                    <button class="btn-qty" data-act="inc">+</button>
+                  </div>
+                </div>
+                <div class="col-12 d-flex align-items-center">
+                  <span class="text-teal-600 fw-medium">Free SSL</span>
+                  <div class="form-check form-switch ms-auto">
+                    <input class="form-check-input feature-check" type="checkbox" data-group="shared-hosting" data-feature="ssl" data-label="Free SSL" data-price-monthly="0" checked>
+                  </div>
+                </div>
+                <div class="col-12 d-flex align-items-center">
+                  <span class="text-teal-600 fw-medium">cPanel Access</span>
+                  <div class="form-check form-switch ms-auto">
+                    <input class="form-check-input feature-check" type="checkbox" data-group="shared-hosting" data-feature="cpanel" data-label="cPanel Access" data-price-monthly="3">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- VPS Hosting -->
+        <div class="card soft-card group-card mb-3" data-group="vps-hosting" data-category-name="VPS Hosting">
+          <div class="card-body">
+            <div class="d-flex align-items-center justify-content-between">
+              <label class="d-flex align-items-center gap-3 mb-0">
+                <input class="form-check-input group-check" type="checkbox">
+                <span class="h6 mb-0 fw-semibold text-teal">VPS Hosting</span>
+              </label>
+              <button class="chev-btn group-toggle" aria-expanded="false">
+                <span class="chev"></span>
+              </button>
+            </div>
+
+            <div class="group-body mt-3" style="display:none">
+              <div class="row gy-3">
+                <div class="col-12 d-flex align-items-center">
+                  <span class="text-teal-600 fw-medium">CPU Cores</span>
+                  <div class="qty-box ms-auto" data-group="vps-hosting" data-key="cpu" data-label="CPU Cores" data-unit="Core" data-step="1" data-min="1" data-max="16" data-included="1" data-price-step-monthly="15">
+                    <button class="btn-qty" data-act="dec">−</button>
+                    <span class="qty-val">1</span><span class="qty-unit">Core</span>
+                    <button class="btn-qty" data-act="inc">+</button>
+                  </div>
+                </div>
+                <div class="col-12 d-flex align-items-center">
+                  <span class="text-teal-600 fw-medium">RAM</span>
+                  <div class="qty-box ms-auto" data-group="vps-hosting" data-key="ram" data-label="RAM" data-unit="GB" data-step="1" data-min="1" data-max="64" data-included="1" data-price-step-monthly="8">
+                    <button class="btn-qty" data-act="dec">−</button>
+                    <span class="qty-val">1</span><span class="qty-unit">GB</span>
+                    <button class="btn-qty" data-act="inc">+</button>
+                  </div>
+                </div>
+                <div class="col-12 d-flex align-items-center">
+                  <span class="text-teal-600 fw-medium">SSD Storage</span>
+                  <div class="qty-box ms-auto" data-group="vps-hosting" data-key="ssd" data-label="SSD Storage" data-unit="GB" data-step="20" data-min="20" data-max="1000" data-included="20" data-price-step-monthly="0.5">
+                    <button class="btn-qty" data-act="dec">−</button>
+                    <span class="qty-val">20</span><span class="qty-unit">GB</span>
+                    <button class="btn-qty" data-act="inc">+</button>
+                  </div>
+                </div>
+                <div class="col-12 d-flex align-items-center">
+                  <span class="text-teal-600 fw-medium">Bandwidth</span>
+                  <div class="qty-box ms-auto" data-group="vps-hosting" data-key="bandwidth" data-label="Bandwidth" data-unit="TB" data-step="1" data-min="1" data-max="20" data-included="1" data-price-step-monthly="5">
+                    <button class="btn-qty" data-act="dec">−</button>
+                    <span class="qty-val">1</span><span class="qty-unit">TB</span>
+                    <button class="btn-qty" data-act="inc">+</button>
+                  </div>
+                </div>
+                <div class="col-12 d-flex align-items-center">
+                  <span class="text-teal-600 fw-medium">Root Access</span>
+                  <div class="form-check form-switch ms-auto">
+                    <input class="form-check-input feature-check" type="checkbox" data-group="vps-hosting" data-feature="root" data-label="Root Access" data-price-monthly="0" checked>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add-ons -->
+        <div class="card soft-card mt-2">
+          <div class="card-body">
+            <h3 class="h6 fw-bold mb-3">Add-on Services</h3>
+            <div class="row g-3" id="addon-services">
+              <div class="col-md-6">
+                <div class="form-check mb-2">
+                  <input class="form-check-input addon-svc" type="checkbox" id="addon-dedicated-ip" data-key="dedicated_ip" data-label="Dedicated IP">
+                  <label class="form-check-label d-flex justify-content-between w-100" for="addon-dedicated-ip">
+                    <span>Dedicated IP</span>
+                    <span class="text-primary" data-price-text>—</span>
+                  </label>
+                </div>
+                <div class="form-check mb-2">
+                  <input class="form-check-input addon-svc" type="checkbox" id="addon-ssl-cert" data-key="ssl_certificate" data-label="SSL Certificate">
+                  <label class="form-check-label d-flex justify-content-between w-100" for="addon-ssl-cert">
+                    <span>SSL Certificate</span>
+                    <span class="text-primary" data-price-text>—</span>
+                  </label>
+                </div>
+                <div class="form-check mb-2">
+                  <input class="form-check-input addon-svc" type="checkbox" id="addon-backup" data-key="daily_backup" data-label="Daily Backup">
+                  <label class="form-check-label d-flex justify-content-between w-100" for="addon-backup">
+                    <span>Daily Backup</span>
+                    <span class="text-primary" data-price-text>—</span>
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-check mb-2">
+                  <input class="form-check-input addon-svc" type="checkbox" id="addon-monitoring" data-key="server_monitoring" data-label="Server Monitoring">
+                  <label class="form-check-label d-flex justify-content-between w-100" for="addon-monitoring">
+                    <span>Server Monitoring</span>
+                    <span class="text-primary" data-price-text>—</span>
+                  </label>
+                </div>
+                <div class="form-check mb-2">
+                  <input class="form-check-input addon-svc" type="checkbox" id="addon-firewall" data-key="firewall_protection" data-label="Firewall Protection">
+                  <label class="form-check-label d-flex justify-content-between w-100" for="addon-firewall">
+                    <span>Firewall Protection</span>
+                    <span class="text-primary" data-price-text>—</span>
+                  </label>
+                </div>
+                <div class="form-check mb-2">
+                  <input class="form-check-input addon-svc" type="checkbox" id="addon-migration" data-key="free_migration" data-label="Free Migration">
+                  <label class="form-check-label d-flex justify-content-between w-100" for="addon-migration">
+                    <span>Free Migration</span>
+                    <span class="text-primary" data-price-text>—</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="col-lg-4">
+        <div class="card soft-card sticky-top" style="top: 90px;">
+          <div class="card-body">
+            <h4 class="h6 fw-bold mb-3">Order Summary</h4>
+            
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="text-secondary">Billing</span>
+              <div class="d-inline-flex align-items-center">
+                <div class="form-check form-check-inline m-0">
+                  <input class="form-check-input" type="radio" name="billing_cycle" id="billingMonthly" value="monthly" checked>
+                  <label class="form-check-label" for="billingMonthly">Monthly</label>
+                </div>
+                <div class="form-check form-check-inline m-0 ms-3">
+                  <input class="form-check-input" type="radio" name="billing_cycle" id="billingAnnual" value="annual">
+                  <label class="form-check-label" for="billingAnnual">Annual</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between small mb-2">
+              <span>Location</span>
+              <span class="fw-semibold" id="summary-location">Bangladesh</span>
+            </div>
+
+            <hr class="my-3">
+            <div id="summary-lines" class="vstack gap-1 small">
+              <div class="text-secondary text-center">Select categories to see pricing</div>
+            </div>
+            <hr class="my-3">
+
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-bold">Total</span>
+              <span class="fw-bold fs-5" id="summary-total">৳0.00</span>
+            </div>
+          </div>
+          <div class="text-center mt-2">
+            <button class="btn btn-primary w-100" id="orderNowBtn" style="padding: 12px; font-size: 16px; font-weight: 600;">
+              Order Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+(() => {
+  'use strict';
+
+  const data = {
+    locations: [
+      {id: 1, name: "Bangladesh", currency_code: "BDT"},
+      {id: 2, name: "Dubai", currency_code: "AED"},
+      {id: 3, name: "USA", currency_code: "USD"},
+      {id: 4, name: "France", currency_code: "EUR"},
+      {id: 5, name: "Sierra Leone", currency_code: "SLE"}
+    ]
+  };
+
+  const $ = (sel, ctx = document) => ctx.querySelector(sel);
+  const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
+
+  const locSel = $('#locationSelect');
+  const sumLoc = $('#summary-location');
+  const sumLines = $('#summary-lines');
+  const sumTotal = $('#summary-total');
+  const billMonthly = $('#billingMonthly');
+  const billAnnual = $('#billingAnnual');
+
+  function currentLocId() {
+    return parseInt(locSel?.value || 1, 10);
+  }
+
+  function currentCycleKey() {
+    return billAnnual?.checked ? 'annual' : 'monthly';
+  }
+
+  function symbol(curr) {
+    const map = { BDT: '৳', USD: '$', AED: 'AED ', EUR: '€', SLE: 'SLE ' };
+    return map[curr] || curr + ' ';
+  }
+
+  function fm(num) {
+    return parseFloat(num).toFixed(2);
+  }
+
+  function money(sym, amt) {
+    return `${sym}${fm(amt)}`;
+  }
+
+  function toAnnual(monthly) {
+    return monthly * 12 * 0.9; // 10% discount
+  }
+
+  function isGroupActive(card) {
+    return card.querySelector('.group-check')?.checked || false;
+  }
+
+  function wireGroupToggles() {
+    $$('.group-toggle').forEach(btn => {
+      if (!btn._bound) {
+        btn._bound = true;
+        btn.addEventListener('click', () => {
+          const body = btn.closest('.card').querySelector('.group-body');
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', !isOpen);
+          body.style.display = isOpen ? 'none' : 'block';
+        });
+      }
+    });
+  }
+
+  function wireGroupChecks() {
+    $$('.group-check').forEach(chk => {
+      if (!chk._bound) {
+        chk._bound = true;
+        chk.addEventListener('change', () => {
+          const card = chk.closest('.group-card');
+          card.classList.toggle('active', chk.checked);
+          recalcSummary();
+        });
+      }
+    });
+  }
+
+  function wireQuantityBoxes() {
+    $$('.qty-box').forEach(box => {
+      const step = parseFloat(box.getAttribute('data-step') || 1);
+
+      if (!box._bound) {
+        box._bound = true;
+        const decBtn = $('[data-act="dec"]', box);
+        const incBtn = $('[data-act="inc"]', box);
+        const valSpan = $('.qty-val', box);
+        const min = parseFloat(box.getAttribute('data-min') || 0);
+        const max = parseFloat(box.getAttribute('data-max') || 0);
+
+        const apply = delta => {
+          let cur = parseFloat(valSpan.textContent || min);
+          cur = Math.min(max, Math.max(min, cur + delta));
+          valSpan.textContent = String(cur);
+          recalcSummary();
+        };
+
+        decBtn?.addEventListener('click', () => apply(-step));
+        incBtn?.addEventListener('click', () => apply(+step));
+      }
+    });
+  }
+
+  function initOrRefreshFeaturePricing() {
+    wireQuantityBoxes();
+    
+    $$('.group-card').forEach(card => {
+      $$('.feature-check', card).forEach(chk => {
+        if (!chk._bound) {
+          chk._bound = true;
+          chk.addEventListener('change', recalcSummary);
+        }
+      });
+
+      $$('.feature-select', card).forEach(sel => {
+        if (!sel._bound) {
+          sel._bound = true;
+          sel.addEventListener('change', recalcSummary);
+        }
+      });
+    });
+  }
+
+  function getFeatureLineItems() {
+    const items = [];
+    const locId = currentLocId();
+    const cycle = currentCycleKey();
+    const location = data.locations?.find(l => String(l.id) === String(locId));
+    const curr = location?.currency_code || 'USD';
+
+    const currencyMultipliers = {
+      'BDT': 1,
+      'USD': 0.012,
+      'AED': 0.044,
+      'EUR': 0.011,
+      'SLE': 0.012
+    };
+
+    const multiplier = currencyMultipliers[curr] || currencyMultipliers['USD'];
+
+    $$('.group-card').forEach(card => {
+      if (!isGroupActive(card)) return;
+
+      const categoryName = card.dataset.categoryName;
+
+      card.querySelectorAll('.qty-box').forEach(box => {
+        const label = box.dataset.label;
+        const unit = box.getAttribute('data-unit') || '';
+        const val = parseFloat(box.querySelector('.qty-val')?.textContent || 0);
+        const included = parseFloat(box.dataset.included || 0);
+        const step = parseFloat(box.dataset.step || 1);
+        let basePriceMon = parseFloat(box.dataset.priceStepMonthly || 0);
+
+        const added = Math.max(0, val - included);
+        const steps = Math.ceil(added / (step || 1));
+        let cost = steps * basePriceMon;
+        
+        if (curr !== 'BDT') {
+          cost = cost * multiplier;
+        }
+
+        if (cycle === 'annual') cost = toAnnual(cost);
+
+        if (cost > 0 || val !== included) {
+          items.push({
+            category: categoryName,
+            name: `${label} — ${val}${unit} (${included}${unit} incl.)`,
+            cost
+          });
+        }
+      });
+
+      card.querySelectorAll('.feature-check').forEach(chkF => {
+        const label = chkF.dataset.label;
+        if (!chkF.checked) return;
+
+        let cost = parseFloat(chkF.dataset.priceMonthly || 0);
+        
+        if (curr !== 'BDT') {
+          cost = cost * multiplier;
+        }
+        
+        if (cycle === 'annual') cost = toAnnual(cost);
+
+        if (cost > 0) {
+          items.push({
+            category: categoryName,
+            name: label,
+            cost
+          });
+        }
+      });
+
+      card.querySelectorAll('.feature-select').forEach(sel => {
+        const label = sel.dataset.label;
+        const opt = sel.options[sel.selectedIndex];
+        const optLbl = (opt?.text || '').trim();
+        let price = parseFloat(opt?.dataset?.price || 0);
+
+        if (curr !== 'BDT') {
+          price = price * multiplier;
+        }
+        
+        if (cycle === 'annual') price = toAnnual(price);
+
+        if (price > 0) {
+          items.push({
+            category: categoryName,
+            name: `${label} — ${optLbl}`,
+            cost: price
+          });
+        }
+      });
+    });
+
+    return items;
+  }
+
+  function refreshAddOnPrices() {
+    const locId = currentLocId();
+    const cycle = currentCycleKey();
+    const location = data.locations?.find(l => String(l.id) === String(locId));
+    const curr = location?.currency_code || 'USD';
+    const sym = symbol(curr);
+
+    const addonPrices = {
+      'dedicated_ip': { BDT: 150, USD: 2, AED: 7, EUR: 2, SLE: 2 },
+      'ssl_certificate': { BDT: 100, USD: 1.5, AED: 5, EUR: 1.5, SLE: 1.5 },
+      'daily_backup': { BDT: 200, USD: 3, AED: 10, EUR: 3, SLE: 3 },
+      'server_monitoring': { BDT: 300, USD: 4, AED: 15, EUR: 4, SLE: 4 },
+      'firewall_protection': { BDT: 250, USD: 3.5, AED: 12, EUR: 3.5, SLE: 3.5 },
+      'free_migration': { BDT: 0, USD: 0, AED: 0, EUR: 0, SLE: 0 }
+    };
+
+    $$('.addon-svc').forEach(input => {
+      const key = input.dataset.key;
+      if (!key || !addonPrices[key]) return;
+
+      let unit = addonPrices[key][curr] || addonPrices[key]['USD'] || 0;
+      if (cycle === 'annual') unit = toAnnual(unit);
+
+      const priceSpan = input.parentElement.querySelector('[data-price-text]');
+      if (priceSpan) {
+        priceSpan.textContent = unit > 0 ? `${sym}${fm(unit)}/${cycle === 'monthly' ? 'mo' : 'yr'}` : 'Free';
+      }
+
+      input.dataset.unit = String(unit);
+      input.dataset.currency = curr;
+
+      if (!input._bound) {
+        input._bound = true;
+        input.addEventListener('change', recalcSummary);
+      }
+    });
+  }
+
+  function recalcSummary() {
+    const locId = currentLocId();
+    const curr = (data.locations?.find(l => String(l.id) === String(locId))?.currency_code) || 'USD';
+    const sym = symbol(curr);
+
+    const featureItems = getFeatureLineItems();
+    const parts = [];
+    let grandTotal = 0;
+
+    if (featureItems.length > 0) {
+      const grouped = {};
+      featureItems.forEach(item => {
+        if (!grouped[item.category]) grouped[item.category] = [];
+        grouped[item.category].push(item);
+      });
+
+      Object.keys(grouped).forEach(catName => {
+        parts.push(`<div class="fw-semibold text-teal mt-2">${catName}</div>`);
+
+        let categoryTotal = 0;
+        grouped[catName].forEach(item => {
+          categoryTotal += item.cost;
+          parts.push(`
+            <div class="d-flex justify-content-between ps-2">
+              <span class="small">${item.name}</span>
+              <span class="small">${money(sym, item.cost)}</span>
+            </div>
+          `);
+        });
+
+        parts.push(`
+          <div class="d-flex justify-content-between fw-semibold ps-2 mt-1">
+            <span class="small">Subtotal</span>
+            <span class="small">${money(sym, categoryTotal)}</span>
+          </div>
+        `);
+
+        grandTotal += categoryTotal;
+      });
+    } else {
+      parts.push(`<div class="text-secondary text-center">Select categories to see pricing</div>`);
+    }
+
+    const checkedAddons = $$('.addon-svc:checked');
+    if (checkedAddons.length > 0) {
+      parts.push(`<hr class="my-2">`);
+      parts.push(`<div class="fw-semibold text-teal">🛒 Add-ons Bucket</div>`);
+
+      let addonsTotal = 0;
+      checkedAddons.forEach(chk => {
+        const label = chk.dataset.label || 'Add-on';
+        const unit = parseFloat(chk.dataset.unit || 0);
+        addonsTotal += unit;
+
+        parts.push(`
+          <div class="d-flex justify-content-between ps-2 align-items-center">
+            <span class="small">${label}</span>
+            <div>
+              <span class="small">${money(sym, unit)}</span>
+              <button class="btn btn-sm btn-outline-danger ms-1" onclick="removeFromBucket('${chk.id}')" style="padding: 0 4px; font-size: 10px;">×</button>
+            </div>
+          </div>
+        `);
+      });
+
+      parts.push(`
+        <div class="d-flex justify-content-between fw-semibold ps-2 mt-1">
+          <span class="small">Bucket Subtotal</span>
+          <span class="small">${money(sym, addonsTotal)}</span>
+        </div>
+      `);
+
+      grandTotal += addonsTotal;
+    }
+
+    sumLines.innerHTML = parts.join('');
+    sumTotal.textContent = money(sym, grandTotal);
+  }
+
+  function init() {
+    locSel?.addEventListener('change', () => {
+      const name = locSel.options[locSel.selectedIndex]?.text?.trim() || '';
+      const id = parseInt(locSel.value, 10);
+      if (sumLoc) sumLoc.textContent = name;
+
+      initOrRefreshFeaturePricing();
+      refreshAddOnPrices();
+      recalcSummary();
+    });
+
+    billMonthly?.addEventListener('change', () => { refreshAddOnPrices(); recalcSummary(); });
+    billAnnual?.addEventListener('change', () => { refreshAddOnPrices(); recalcSummary(); });
+
+    wireGroupToggles();
+    wireGroupChecks();
+
+    initOrRefreshFeaturePricing();
+    refreshAddOnPrices();
+    recalcSummary();
+  }
+
+  window.removeFromBucket = function(addonId) {
+    const addon = document.getElementById(addonId);
+    if (addon) {
+      addon.checked = false;
+      recalcSummary();
+    }
+  };
+
+  document.addEventListener('DOMContentLoaded', init);
+})();
+</script>
+
+        <div id="site-footer"></div>
+
+    <script src="js/components.js"></script>
+
+</body>
+</html>
+
+

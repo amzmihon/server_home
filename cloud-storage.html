@@ -1,0 +1,685 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Storage / Drive - BAR & Associates</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/basket.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .region-btn.active {
+            background-color: #2563EB;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased" data-page="services" data-service="cloud-storage">
+
+    <div id="site-nav"></div>
+
+
+    <!-- Container for content -->
+    <div class="container mx-auto px-4 py-12 md:py-20">
+
+        <!-- Header -->
+        <header class="text-center max-w-3xl mx-auto mb-12">
+            <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+                ☁️ Cloud Storage / Drive
+            </h1>
+            <p class="text-lg text-gray-600">
+                Secure private cloud for file management with web/mobile access, team sharing, and granular access controls (folders, links, expiry). End-to-end encryption at rest/in transit, version history, and automatic backups keep your data safe. Integrates with SSO, Office/Docs preview, and desktop sync for a smooth, productivity-first workflow.
+            </p>
+        </header>
+
+        <!-- Region Switcher -->
+        <nav class="flex flex-wrap justify-center gap-2 mb-12">
+            <button id="btn-bd" class="region-btn active text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('bd')">
+                🇧🇩 Bangladesh
+            </button>
+            <button id="btn-uae" class="region-btn text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('uae')">
+                Middle East
+            </button>
+            <button id="btn-eu" class="region-btn text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('eu')">
+                🇪🇺 Europe
+            </button>
+            <button id="btn-us" class="region-btn text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('us')">
+                🇺🇸 United States
+            </button>
+            <button id="btn-asia" class="region-btn text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('asia')">
+                🌏 Asia
+            </button>
+            <button id="btn-africa" class="region-btn text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('africa')">
+                🌍 Africa
+            </button>
+        </nav>
+
+        <!-- Storage Plans Section -->
+        <div class="max-w-6xl mx-auto mb-16">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">Cloud Storage Plans</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Personal Plan -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex justify-center mb-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-semibold text-center text-gray-900 mb-2">Personal</h3>
+                        <div class="text-center mb-4">
+                            <span id="personal-price" class="text-2xl font-bold text-gray-900">৳200</span>
+                            <span class="text-gray-500">/month</span>
+                        </div>
+                        <div class="text-center mb-4">
+                            <span class="text-3xl font-bold text-blue-600">100GB</span>
+                        </div>
+                        <ul class="space-y-2 mb-6 text-sm">
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">Web & Mobile Access</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">File Sharing</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">Basic Encryption</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-4 bg-gray-50">
+                        <button class="storage-buy-btn block w-full text-center bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 hover:bg-green-700 hover:shadow-md" data-type="Personal Cloud Storage" data-size="100GB" data-price="200">
+                            Choose Personal
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Business Plan -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden ring-2 ring-blue-600 relative">
+                    <div class="absolute top-0 right-0 -mt-2 mr-2">
+                        <span class="inline-flex items-center rounded-full bg-blue-600 px-2 py-1 text-xs font-medium text-white shadow-lg">POPULAR</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-center mb-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" /></svg>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-semibold text-center text-gray-900 mb-2">Business</h3>
+                        <div class="text-center mb-4">
+                            <span id="business-price" class="text-2xl font-bold text-gray-900">৳800</span>
+                            <span class="text-gray-500">/month</span>
+                        </div>
+                        <div class="text-center mb-4">
+                            <span class="text-3xl font-bold text-blue-600">500GB</span>
+                        </div>
+                        <ul class="space-y-2 mb-6 text-sm">
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">Team Collaboration</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">Advanced Sharing</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">Version History</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-4 bg-gray-50">
+                        <button class="storage-buy-btn block w-full text-center bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-md" data-type="Business Cloud Storage" data-size="500GB" data-price="800">
+                            Choose Business
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex justify-center mb-4">
+                            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-purple-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" /></svg>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-semibold text-center text-gray-900 mb-2">Enterprise</h3>
+                        <div class="text-center mb-4">
+                            <span id="enterprise-price" class="text-2xl font-bold text-gray-900">৳2,000</span>
+                            <span class="text-gray-500">/month</span>
+                        </div>
+                        <div class="text-center mb-4">
+                            <span class="text-3xl font-bold text-purple-600">2TB</span>
+                        </div>
+                        <ul class="space-y-2 mb-6 text-sm">
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">Admin Controls</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">SSO Integration</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">Priority Support</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-4 bg-gray-50">
+                        <button class="storage-buy-btn block w-full text-center bg-purple-600 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 hover:bg-purple-700 hover:shadow-md" data-type="Enterprise Cloud Storage" data-size="2TB" data-price="2000">
+                            Choose Enterprise
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Unlimited Plan -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex justify-center mb-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-orange-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-semibold text-center text-gray-900 mb-2">Unlimited</h3>
+                        <div class="text-center mb-4">
+                            <span id="unlimited-price" class="text-2xl font-bold text-gray-900">৳5,000</span>
+                            <span class="text-gray-500">/month</span>
+                        </div>
+                        <div class="text-center mb-4">
+                            <span class="text-3xl font-bold text-orange-600">∞</span>
+                        </div>
+                        <ul class="space-y-2 mb-6 text-sm">
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">Unlimited Storage</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">All Features</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">24/7 Support</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-4 bg-gray-50">
+                        <button class="storage-buy-btn block w-full text-center bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 hover:bg-orange-700 hover:shadow-md" data-type="Unlimited Cloud Storage" data-size="Unlimited" data-price="5000">
+                            Choose Unlimited
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="max-w-6xl mx-auto mb-16">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">Cloud Storage Features</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Security & Encryption -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.623 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">End-to-End Encryption</h3>
+                    <p class="text-sm text-gray-600 mb-4">Military-grade encryption at rest and in transit keeps your data secure</p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• AES-256 encryption</li>
+                        <li>• Zero-knowledge architecture</li>
+                        <li>• Secure file transmission</li>
+                    </ul>
+                </div>
+
+                <!-- Team Collaboration -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" /></svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Team Sharing</h3>
+                    <p class="text-sm text-gray-600 mb-4">Advanced sharing controls with granular permissions and expiry dates</p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Folder-level permissions</li>
+                        <li>• Link sharing with expiry</li>
+                        <li>• Team workspaces</li>
+                    </ul>
+                </div>
+
+                <!-- Access & Sync -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" /></svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Multi-Platform Access</h3>
+                    <p class="text-sm text-gray-600 mb-4">Access your files from web, mobile, and desktop with real-time sync</p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Web interface</li>
+                        <li>• Mobile apps (iOS/Android)</li>
+                        <li>• Desktop sync clients</li>
+                    </ul>
+                </div>
+
+                <!-- Version Control -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-purple-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Version History</h3>
+                    <p class="text-sm text-gray-600 mb-4">Track changes and restore previous versions of your files</p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• 30-day version history</li>
+                        <li>• File recovery</li>
+                        <li>• Change tracking</li>
+                    </ul>
+                </div>
+
+                <!-- Office Integration -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                    <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-orange-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Office Integration</h3>
+                    <p class="text-sm text-gray-600 mb-4">Preview and edit Office documents directly in your browser</p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Document preview</li>
+                        <li>• Online editing</li>
+                        <li>• Real-time collaboration</li>
+                    </ul>
+                </div>
+
+                <!-- Backup & Recovery -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" /></svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Auto Backup</h3>
+                    <p class="text-sm text-gray-600 mb-4">Automatic backups ensure your data is always protected</p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Automated backups</li>
+                        <li>• Disaster recovery</li>
+                        <li>• Data redundancy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Custom Storage Builder -->
+        <div class="max-w-7xl mx-auto px-4 py-12">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-2">🛠️ Build Your Custom Cloud Storage Plan</h2>
+                <p class="text-gray-600">Configure storage and features according to your specific requirements</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Custom Storage Configuration -->
+                <div class="lg:col-span-2">
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-6">Configure Storage & Features</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Storage Size -->
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Storage Size</label>
+                                <div class="flex items-center space-x-2">
+                                    <input type="range" id="storage-range" min="10" max="5000" value="100" step="10" class="flex-1">
+                                    <input type="number" id="storage-input" min="10" max="5000" value="100" step="10" class="w-20 px-2 py-1 text-sm border border-gray-300 rounded">
+                                    <span class="text-sm font-medium w-8">GB</span>
+                                </div>
+                                <div class="text-xs text-gray-500">Base: 10GB, Price: ৳2/GB</div>
+                            </div>
+
+                            <!-- Users -->
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Number of Users</label>
+                                <div class="flex items-center space-x-2">
+                                    <input type="range" id="users-range" min="1" max="100" value="5" class="flex-1">
+                                    <input type="number" id="users-input" min="1" max="100" value="5" class="w-16 px-2 py-1 text-sm border border-gray-300 rounded">
+                                    <span class="text-sm font-medium w-12">Users</span>
+                                </div>
+                                <div class="text-xs text-gray-500">Base: 1 User, Price: ৳50/User</div>
+                            </div>
+
+                            <!-- Bandwidth -->
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Monthly Bandwidth</label>
+                                <div class="flex items-center space-x-2">
+                                    <input type="range" id="cloud-bandwidth-range" min="100" max="10000" value="1000" step="100" class="flex-1">
+                                    <input type="number" id="cloud-bandwidth-input" min="100" max="10000" value="1000" step="100" class="w-20 px-2 py-1 text-sm border border-gray-300 rounded">
+                                    <span class="text-sm font-medium w-8">GB</span>
+                                </div>
+                                <div class="text-xs text-gray-500">Base: 100GB, Price: ৳1/GB</div>
+                            </div>
+
+                            <!-- File Size Limit -->
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Max File Size</label>
+                                <div class="flex items-center space-x-2">
+                                    <input type="range" id="filesize-range" min="100" max="10000" value="2000" step="100" class="flex-1">
+                                    <input type="number" id="filesize-input" min="100" max="10000" value="2000" step="100" class="w-20 px-2 py-1 text-sm border border-gray-300 rounded">
+                                    <span class="text-sm font-medium w-8">MB</span>
+                                </div>
+                                <div class="text-xs text-gray-500">Base: 100MB, Price: ৳0.5/MB</div>
+                            </div>
+                        </div>
+
+                        <!-- Storage Features -->
+                        <div class="mt-8">
+                            <h4 class="text-md font-medium text-gray-900 mb-4">Storage Features & Add-ons</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="space-y-3">
+                                    <label class="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="desktop-sync" class="storage-feature" data-price="0">
+                                        <span class="flex-1">Desktop Sync Client</span>
+                                        <span class="text-green-600 font-medium">Free</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="version-history" class="storage-feature" data-price="100">
+                                        <span class="flex-1">Extended Version History (90 days)</span>
+                                        <span class="text-blue-600 font-medium">৳100</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="advanced-sharing" class="storage-feature" data-price="150">
+                                        <span class="flex-1">Advanced Sharing Controls</span>
+                                        <span class="text-blue-600 font-medium">৳150</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="advanced-backup" class="storage-feature" data-price="180">
+                                        <span class="flex-1">Advanced Backup & Recovery</span>
+                                        <span class="text-blue-600 font-medium">৳180</span>
+                                    </label>
+                                </div>
+                                <div class="space-y-3">
+                                    <label class="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="api-access" class="storage-feature" data-price="120">
+                                        <span class="flex-1">API Access</span>
+                                        <span class="text-blue-600 font-medium">৳120</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="priority-support" class="storage-feature" data-price="200">
+                                        <span class="flex-1">Priority Support</span>
+                                        <span class="text-blue-600 font-medium">৳200</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="office-integration" class="storage-feature" data-price="250">
+                                        <span class="flex-1">Office Suite Integration</span>
+                                        <span class="text-blue-600 font-medium">৳250</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="sso-integration" class="storage-feature" data-price="300">
+                                        <span class="flex-1">SSO Integration</span>
+                                        <span class="text-blue-600 font-medium">৳300</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Storage Summary -->
+                <div>
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 sticky top-24">
+                        <h4 class="text-lg font-semibold text-gray-900 mb-4">Custom Storage Summary</h4>
+                        
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span>Storage Size:</span>
+                                <span id="summary-storage" class="font-medium">100 GB</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Users:</span>
+                                <span id="summary-users" class="font-medium">5 Users</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Bandwidth:</span>
+                                <span id="summary-cloud-bandwidth" class="font-medium">1000 GB</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Max File Size:</span>
+                                <span id="summary-filesize" class="font-medium">2000 MB</span>
+                            </div>
+                        </div>
+
+                        <hr class="my-4">
+                        
+                        <div id="storage-features-list" class="space-y-2 text-sm">
+                            <div class="text-gray-500 text-center">No additional features selected</div>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-sm">
+                                <span>Base Resources:</span>
+                                <span id="storage-base-cost" class="font-medium">৳0</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span>Additional Features:</span>
+                                <span id="storage-features-cost" class="font-medium">৳0</span>
+                            </div>
+                            <div class="flex justify-between items-center pt-2 border-t">
+                                <span class="font-semibold">Monthly Total:</span>
+                                <span id="storage-custom-total" class="font-bold text-lg text-blue-600">৳0</span>
+                            </div>
+                        </div>
+
+                        <button id="addCustomStorage" class="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors mt-6">
+                            Add Custom Storage to Basket
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+        <div id="site-footer"></div>
+
+    <!-- Cloud Storage Script -->
+    <script>
+        const storagePricing = {
+            'bd': {
+                currency: '৳',
+                plans: { personal: '200', business: '800', enterprise: '2,000', unlimited: '5,000' }
+            },
+            'uae': {
+                currency: 'AED ',
+                plans: { personal: '5', business: '20', enterprise: '50', unlimited: '125' }
+            },
+            'eu': {
+                currency: '€',
+                plans: { personal: '1.99', business: '7.99', enterprise: '19.99', unlimited: '49.99' }
+            },
+            'us': {
+                currency: '$',
+                plans: { personal: '1.99', business: '7.99', enterprise: '19.99', unlimited: '49.99' }
+            },
+            'asia': {
+                currency: '$',
+                plans: { personal: '1.79', business: '6.99', enterprise: '17.99', unlimited: '44.99' }
+            },
+            'africa': {
+                currency: '$',
+                plans: { personal: '2.50', business: '8.50', enterprise: '21.50', unlimited: '52.50' }
+            }
+        };
+
+        let currentRegion = 'bd';
+
+        function showRegion(regionKey) {
+            currentRegion = regionKey;
+            const regionData = storagePricing[regionKey];
+            const currency = regionData.currency;
+
+            // Update plan prices
+            document.getElementById('personal-price').textContent = currency + regionData.plans.personal;
+            document.getElementById('business-price').textContent = currency + regionData.plans.business;
+            document.getElementById('enterprise-price').textContent = currency + regionData.plans.enterprise;
+            document.getElementById('unlimited-price').textContent = currency + regionData.plans.unlimited;
+
+            // Update region buttons
+            document.querySelectorAll('.region-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(`btn-${regionKey}`).classList.add('active');
+        }
+
+        // Storage plan buy buttons
+        document.querySelectorAll('.storage-buy-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const storageType = this.dataset.type;
+                const storageSize = this.dataset.size;
+                const planKey = storageType.toLowerCase().split(' ')[0];
+                const price = storagePricing[currentRegion].plans[planKey];
+                
+                const storageItem = {
+                    id: 'storage-' + Date.now(),
+                    name: `${storageType} (${storageSize})`,
+                    type: 'Cloud Storage',
+                    region: currentRegion,
+                    price: storagePricing[currentRegion].currency + price + '/month'
+                };
+                
+                basket.addItem(storageItem);
+            });
+        });
+
+        // Custom Storage Builder functionality
+        function updateCustomStorage() {
+            const regionData = storagePricing[currentRegion];
+            const currency = regionData.currency;
+            
+            // Get resource values
+            const storage = parseInt(document.getElementById('storage-range').value);
+            const users = parseInt(document.getElementById('users-range').value);
+            const bandwidth = parseInt(document.getElementById('cloud-bandwidth-range').value);
+            const filesize = parseInt(document.getElementById('filesize-range').value);
+            
+            // Sync input fields
+            document.getElementById('storage-input').value = storage;
+            document.getElementById('users-input').value = users;
+            document.getElementById('cloud-bandwidth-input').value = bandwidth;
+            document.getElementById('filesize-input').value = filesize;
+            
+            // Update summary
+            document.getElementById('summary-storage').textContent = storage + ' GB';
+            document.getElementById('summary-users').textContent = users + (users === 1 ? ' User' : ' Users');
+            document.getElementById('summary-cloud-bandwidth').textContent = bandwidth + ' GB';
+            document.getElementById('summary-filesize').textContent = filesize + ' MB';
+            
+            // Calculate base cost
+            let baseCost = 100; // Base storage cost
+            baseCost += Math.max(0, (storage - 10)) * 2; // Storage: ৳2/GB after first 10GB
+            baseCost += (users - 1) * 50; // Users: ৳50/user after first user
+            baseCost += Math.max(0, (bandwidth - 100)) * 1; // Bandwidth: ৳1/GB after first 100GB
+            baseCost += Math.max(0, (filesize - 100)) * 0.5; // File size: ৳0.5/MB after first 100MB
+            
+            // Calculate features cost
+            let featuresCost = 0;
+            const featuresList = [];
+            document.querySelectorAll('.storage-feature:checked').forEach(feature => {
+                const price = parseInt(feature.dataset.price);
+                featuresCost += price;
+                const label = feature.parentElement.querySelector('span').textContent;
+                if (price > 0) {
+                    featuresList.push(`<div class="flex justify-between"><span>${label}</span><span>${currency}${price}</span></div>`);
+                } else {
+                    featuresList.push(`<div class="flex justify-between"><span>${label}</span><span class="text-green-600">Free</span></div>`);
+                }
+            });
+            
+            // Update costs display
+            document.getElementById('storage-base-cost').textContent = currency + baseCost;
+            document.getElementById('storage-features-cost').textContent = currency + featuresCost;
+            document.getElementById('storage-custom-total').textContent = currency + (baseCost + featuresCost);
+            
+            // Update features list
+            const featuresListEl = document.getElementById('storage-features-list');
+            if (featuresList.length > 0) {
+                featuresListEl.innerHTML = featuresList.join('');
+            } else {
+                featuresListEl.innerHTML = '<div class="text-gray-500 text-center">No additional features selected</div>';
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            showRegion('bd');
+            
+            // Initialize storage custom plan builder
+            document.querySelectorAll('#storage-range, #users-range, #cloud-bandwidth-range, #filesize-range').forEach(slider => {
+                slider.addEventListener('input', updateCustomStorage);
+            });
+            
+            // Sync number inputs with sliders
+            document.getElementById('storage-input').addEventListener('input', function() {
+                document.getElementById('storage-range').value = this.value;
+                updateCustomStorage();
+            });
+            document.getElementById('users-input').addEventListener('input', function() {
+                document.getElementById('users-range').value = this.value;
+                updateCustomStorage();
+            });
+            document.getElementById('cloud-bandwidth-input').addEventListener('input', function() {
+                document.getElementById('cloud-bandwidth-range').value = this.value;
+                updateCustomStorage();
+            });
+            document.getElementById('filesize-input').addEventListener('input', function() {
+                document.getElementById('filesize-range').value = this.value;
+                updateCustomStorage();
+            });
+            
+            document.querySelectorAll('.storage-feature').forEach(checkbox => {
+                checkbox.addEventListener('change', updateCustomStorage);
+            });
+            
+            // Auto-sort features by price (free items first)
+            function sortFeaturesByPrice() {
+                const containers = document.querySelectorAll('.grid.grid-cols-1.md\\:grid-cols-2 .space-y-3');
+                containers.forEach(container => {
+                    const labels = Array.from(container.querySelectorAll('label'));
+                    labels.sort((a, b) => {
+                        const priceA = parseInt(a.querySelector('input').dataset.price || '0');
+                        const priceB = parseInt(b.querySelector('input').dataset.price || '0');
+                        return priceA - priceB;
+                    });
+                    labels.forEach(label => container.appendChild(label));
+                });
+            }
+            sortFeaturesByPrice();
+            
+            // Custom storage plan to basket
+            document.getElementById('addCustomStorage').addEventListener('click', () => {
+                const customStoragePlan = {
+                    id: 'custom-storage-' + Date.now(),
+                    name: 'Custom Cloud Storage Plan',
+                    type: 'Custom Cloud Storage',
+                    region: currentRegion,
+                    price: document.getElementById('storage-custom-total').textContent
+                };
+                
+                basket.addItem(customStoragePlan);
+            });
+            
+            // Initialize custom storage
+            updateCustomStorage();
+            
+            // Re-sort when region changes
+            const originalShowRegion = window.showRegion;
+            window.showRegion = function(regionKey) {
+                originalShowRegion(regionKey);
+                setTimeout(sortFeaturesByPrice, 10);
+            };
+        });
+    </script>
+
+    <script src="js/components.js"></script>
+
+</body>
+</html>
+
+

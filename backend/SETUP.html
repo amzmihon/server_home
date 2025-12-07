@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BAR & Associates - Hosting Control Panel Setup</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #2563EB; }
+        .section { margin: 30px 0; padding: 20px; background: #f5f5f5; border-radius: 8px; }
+        code { background: #e0e0e0; padding: 2px 6px; border-radius: 3px; }
+        pre { background: #222; color: #0f0; padding: 15px; border-radius: 5px; overflow-x: auto; }
+        .warning { background: #fff3cd; padding: 15px; border-radius: 5px; border-left: 4px solid #ffc107; }
+        .success { background: #d4edda; padding: 15px; border-radius: 5px; border-left: 4px solid #28a745; }
+    </style>
+</head>
+<body>
+    <h1>🚀 BAR & Associates - Hosting Control Panel</h1>
+    <p>Comprehensive Laravel backend for managing hosting packages, features, payments, and customization limits.</p>
+
+    <div class="section">
+        <h2>📋 Installation & Setup</h2>
+        <h3>1. Clone and Install</h3>
+        <pre>cd backend
+cp .env.example .env
+composer install
+php artisan key:generate</pre>
+
+        <h3>2. Database Configuration</h3>
+        <p>Update your <code>.env</code> file with database credentials:</p>
+        <pre>DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=bar_hosting
+DB_USERNAME=root
+DB_PASSWORD=</pre>
+
+        <h3>3. Run Migrations</h3>
+        <pre>php artisan migrate
+php artisan db:seed</pre>
+
+        <h3>4. Configure Payment Gateways</h3>
+        <p>Add to <code>.env</code>:</p>
+        <pre>STRIPE_PUBLIC_KEY=pk_test_...
+STRIPE_SECRET_KEY=sk_test_...
+BKASH_APP_KEY=...
+BKASH_APP_SECRET=...</pre>
+    </div>
+
+    <div class="section">
+        <h2>🎯 Key Features</h2>
+        <ul>
+            <li><strong>Package Management:</strong> Create, edit, delete hosting packages</li>
+            <li><strong>Feature Configuration:</strong> Add features with types (number, boolean, dropdown, text)</li>
+            <li><strong>Dynamic Pricing:</strong> Calculate prices based on customization</li>
+            <li><strong>Customization Limits:</strong> Set per-user resource limits</li>
+            <li><strong>Payment Processing:</strong> Stripe, bKash, Nagad integration</li>
+            <li><strong>Order Management:</strong> Track orders and generate invoices</li>
+            <li><strong>Audit Logging:</strong> Full audit trail of admin actions</li>
+            <li><strong>Security:</strong> 2FA, RBAC, CSRF protection</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>📁 Project Structure</h2>
+        <pre>backend/
+├── app/
+│   ├── Models/              # Eloquent models
+│   ├── Http/Controllers/
+│   │   ├── Admin/          # Admin controllers
+│   │   └── Client/         # Client API controllers
+│   └── Http/Middleware/    # Security middleware
+├── database/
+│   ├── migrations/         # Database schemas
+│   └── seeders/            # Sample data
+├── resources/views/        # Laravel blade views
+├── routes/
+│   ├── api.php            # API routes
+│   └── web.php            # Web routes
+└── public/
+    └── js/
+        └── hosting-customizer.js  # Frontend integration</pre>
+    </div>
+
+    <div class="section">
+        <h2>🔐 Security Implementation</h2>
+        <h3>Authentication & Authorization</h3>
+        <ul>
+            <li>Laravel Sanctum for API authentication</li>
+            <li>Role-based access control (RBAC)</li>
+            <li>Admin middleware for protected routes</li>
+            <li>Two-factor authentication (2FA) support</li>
+        </ul>
+
+        <h3>Payment Security</h3>
+        <ul>
+            <li>HTTPS required for payment processing</li>
+            <li>CSRF token validation</li>
+            <li>Encrypted payment gateway credentials</li>
+            <li>PCI-DSS compliant payment handling</li>
+            <li>Secure webhook verification</li>
+        </ul>
+
+        <h3>Database Security</h3>
+        <ul>
+            <li>Parameterized queries (Eloquent ORM)</li>
+            <li>Input validation on all endpoints</li>
+            <li>Soft deletes for data preservation</li>
+            <li>Audit logging of sensitive operations</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>🗄️ Database Schema</h2>
+        <h3>Core Tables</h3>
+        <ul>
+            <li><strong>categories:</strong> Service categories (Shared Hosting, VPS, etc.)</li>
+            <li><strong>features:</strong> Customizable features for packages</li>
+            <li><strong>packages:</strong> Hosting packages with pricing</li>
+            <li><strong>package_features:</strong> Link features to packages with modifiers</li>
+            <li><strong>orders:</strong> Customer orders with customization data</li>
+            <li><strong>payments:</strong> Payment transactions and status</li>
+            <li><strong>invoices:</strong> Generated invoices for orders</li>
+            <li><strong>customization_limits:</strong> Per-user feature limits</li>
+            <li><strong>audit_logs:</strong> Admin action audit trail</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>🔧 API Endpoints</h2>
+        <h3>Admin Routes (Protected by <code>auth</code> + <code>admin</code> middleware)</h3>
+        <pre>POST   /admin/packages              Create package
+GET    /admin/packages/{id}          View package
+PUT    /admin/packages/{id}          Update package
+DELETE /admin/packages/{id}          Delete package
+POST   /admin/packages/bulk-action   Bulk operations
+
+POST   /admin/features               Create feature
+PUT    /admin/features/{id}          Update feature
+DELETE /admin/features/{id}          Delete feature
+
+GET    /admin/payments               List payments
+POST   /admin/payments               Create payment record
+POST   /admin/payments/{id}/refund   Process refund
+
+GET    /admin/orders                 List orders
+POST   /admin/orders/{id}/generate-invoice  Generate invoice
+
+POST   /admin/users/{id}/customization-limits     Set limits
+POST   /admin/customization-limits/bulk-set       Bulk set limits</pre>
+
+        <h3>Client API Routes (Protected by <code>auth:sanctum</code>)</h3>
+        <pre>GET    /api/packages                          List all packages
+GET    /api/packages/{id}                     Get package details
+POST   /api/packages/{id}/customize           Customize package
+POST   /api/packages/{id}/validate-customization  Validate customization
+POST   /api/checkout/process                  Create order
+POST   /api/checkout/calculate-price          Calculate total price
+POST   /api/payment/{order}/stripe            Process Stripe payment
+POST   /api/payment/{order}/bkash             Process bKash payment
+GET    /api/payment/{order}                   Get payment page</pre>
+    </div>
+
+    <div class="section">
+        <h2>💳 Payment Integration Examples</h2>
+        <h3>Frontend Integration</h3>
+        <pre>// Initialize customizer
+const customizer = new HostingPackageCustomizer({
+    apiBase: '/api',
+    token: document.querySelector('meta[name="auth-token"]').content
+});
+
+// Load and customize package
+await customizer.loadPackage(1);
+customizer.setCustomization(5, 50); // Feature 5 = 50GB
+customizer.setCustomization(6, true); // Feature 6 = enabled
+
+// Calculate price
+const pricing = await customizer.calculatePrice();
+
+// Checkout
+const order = await customizer.checkout('monthly', {
+    company_name: 'My Company',
+    domain: 'example.com'
+});
+
+// Process payment
+const payment = new PaymentProcessor({
+    apiBase: '/api',
+    stripePublicKey: 'pk_test_...'
+});
+await payment.processStripePayment(order.order_id, paymentMethodId);</pre>
+    </div>
+
+    <div class="section">
+        <h2>🚀 Running the Application</h2>
+        <pre>cd backend
+php artisan serve</pre>
+        <p>Application will run on <code>http://localhost:8000</code></p>
+        <p>Admin dashboard: <code>http://localhost:8000/admin</code></p>
+    </div>
+
+    <div class="warning">
+        <h3>⚠️ Important: Security Checklist</h3>
+        <ul>
+            <li>Always use HTTPS in production</li>
+            <li>Keep <code>.env</code> secrets secure and never commit to git</li>
+            <li>Enable 2FA for admin users</li>
+            <li>Regularly review audit logs</li>
+            <li>Keep Laravel and dependencies updated</li>
+            <li>Use environment-specific database credentials</li>
+            <li>Validate and sanitize all user input</li>
+            <li>Rate limit payment endpoints</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>📚 File Reference</h2>
+        <h3>Models</h3>
+        <ul>
+            <li><code>app/Models/User.php</code> - User with admin flag and relationships</li>
+            <li><code>app/Models/Category.php</code> - Service category</li>
+            <li><code>app/Models/Feature.php</code> - Customizable feature</li>
+            <li><code>app/Models/Package.php</code> - Hosting package with pricing</li>
+            <li><code>app/Models/Order.php</code> - Customer order</li>
+            <li><code>app/Models/Payment.php</code> - Payment transaction</li>
+            <li><code>app/Models/Invoice.php</code> - Generated invoice</li>
+            <li><code>app/Models/CustomizationLimit.php</code> - User feature limits</li>
+            <li><code>app/Models/AuditLog.php</code> - Admin action audit trail</li>
+        </ul>
+
+        <h3>Controllers</h3>
+        <ul>
+            <li><code>Admin/PackageController.php</code> - Package CRUD</li>
+            <li><code>Admin/FeatureController.php</code> - Feature management</li>
+            <li><code>Admin/PaymentController.php</code> - Payment dashboard</li>
+            <li><code>Admin/OrderController.php</code> - Order management</li>
+            <li><code>Client/PackageController.php</code> - Client package API</li>
+            <li><code>Client/CheckoutController.php</code> - Checkout processing</li>
+            <li><code>Client/PaymentController.php</code> - Payment gateway integration</li>
+        </ul>
+
+        <h3>Migrations</h3>
+        <ul>
+            <li>2024_01_01_000001_create_categories_table.php</li>
+            <li>2024_01_01_000002_create_features_table.php</li>
+            <li>2024_01_01_000003_create_packages_table.php</li>
+            <li>2024_01_01_000004_create_package_features_table.php</li>
+            <li>2024_01_01_000005_create_orders_table.php</li>
+            <li>2024_01_01_000006_create_payments_table.php</li>
+            <li>2024_01_01_000007_create_invoices_table.php</li>
+            <li>2024_01_01_000008_create_customization_limits_table.php</li>
+            <li>2024_01_01_000009_create_audit_logs_table.php</li>
+        </ul>
+    </div>
+
+    <div class="success">
+        <h3>✅ Next Steps</h3>
+        <ol>
+            <li>Install dependencies: <code>composer install</code></li>
+            <li>Configure database in <code>.env</code></li>
+            <li>Run migrations: <code>php artisan migrate</code></li>
+            <li>Set up payment gateway credentials</li>
+            <li>Create admin user via <code>php artisan tinker</code></li>
+            <li>Start development server: <code>php artisan serve</code></li>
+            <li>Access admin panel at <code>http://localhost:8000/admin</code></li>
+        </ol>
+    </div>
+</body>
+</html>

@@ -1,0 +1,685 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datacenter Facilities - BAR & Associates</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/basket.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .region-btn.active {
+            background-color: #2563EB;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased" data-page="services" data-service="datacenter">
+
+    <div id="site-nav"></div>
+
+
+    <!-- Container for datacenter content -->
+    <div class="container mx-auto px-4 py-12 md:py-20">
+
+        <!-- Header -->
+        <header class="text-center max-w-3xl mx-auto mb-12">
+            <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+                🏢 Datacenter Facilities
+            </h1>
+            <p class="text-lg text-gray-600">
+                Professional datacenter services with 24/7 monitoring, redundant power, and enterprise-grade infrastructure.
+            </p>
+        </header>
+
+        <!-- Region Switcher -->
+        <nav class="flex flex-wrap justify-center gap-2 mb-12">
+            <button id="btn-bd" class="region-btn active text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('bd')">
+                🇧🇩 Bangladesh (BDIX)
+            </button>
+            <button id="btn-uae" class="region-btn text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('uae')">
+                Middle East
+            </button>
+            <button id="btn-eu" class="region-btn text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('eu')">
+                🇪🇺 Europe
+            </button>
+            <button id="btn-us" class="region-btn text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('us')">
+                🇺🇸 United States
+            </button>
+            <button id="btn-asia" class="region-btn text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('asia')">
+                🌏 Asia
+            </button>
+            <button id="btn-africa" class="region-btn text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('africa')">
+                🌍 Africa
+            </button>
+        </nav>
+
+        <!-- Datacenter Services Grid -->
+        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            
+            <!-- 1U Server Space -->
+            <div id="service-0" class="service-card flex flex-col bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-xl">
+                <div class="p-8 flex-grow">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 0 1-3-3m3 3a3 3 0 0 0 3 3h7.5a3 3 0 0 0 3-3m-13.5 0v-4.5a3 3 0 0 1 3-3h7.5a3 3 0 0 1 3 3v4.5m-13.5 0a3 3 0 0 1-3-3m0 0v-4.5a3 3 0 0 1 3-3h7.5a3 3 0 0 1 3 3v4.5m0 0v-4.5a3 3 0 0 0-3-3h-7.5a3 3 0 0 0-3 3v4.5m13.5 0v-4.5a3 3 0 0 0-3-3h-7.5a3 3 0 0 0-3 3v4.5" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h2 id="service-0-name" class="text-2xl font-semibold text-center text-gray-900 mb-2">1U Server Space</h2>
+                    <div class="text-center mb-6">
+                        <span id="service-0-price" class="text-4xl font-bold text-gray-900">৳2,500</span>
+                        <span class="text-gray-500">/mo</span>
+                    </div>
+                    <ul id="service-0-features" class="space-y-3 mb-8"></ul>
+                </div>
+                <div class="p-6 bg-gray-50">
+                    <button onclick="addToBasket('service-0')" class="block w-full text-center bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-md">
+                        Add to Basket
+                    </button>
+                </div>
+            </div>
+
+            <!-- 2U Server Space -->
+            <div id="service-1" class="service-card flex flex-col bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-xl">
+                <div class="p-8 flex-grow">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 0 1-3-3m3 3a3 3 0 0 0 3 3h7.5a3 3 0 0 0 3-3m-13.5 0v-4.5a3 3 0 0 1 3-3h7.5a3 3 0 0 1 3 3v4.5m-13.5 0a3 3 0 0 1-3-3m0 0v-4.5a3 3 0 0 1 3-3h7.5a3 3 0 0 1 3 3v4.5m0 0v-4.5a3 3 0 0 0-3-3h-7.5a3 3 0 0 0-3 3v4.5m13.5 0v-4.5a3 3 0 0 0-3-3h-7.5a3 3 0 0 0-3 3v4.5" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h2 id="service-1-name" class="text-2xl font-semibold text-center text-gray-900 mb-2">2U Server Space</h2>
+                    <div class="text-center mb-6">
+                        <span id="service-1-price" class="text-4xl font-bold text-gray-900">৳4,500</span>
+                        <span class="text-gray-500">/mo</span>
+                    </div>
+                    <ul id="service-1-features" class="space-y-3 mb-8"></ul>
+                </div>
+                <div class="p-6 bg-gray-50">
+                    <button onclick="addToBasket('service-1')" class="block w-full text-center bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-md">
+                        Add to Basket
+                    </button>
+                </div>
+            </div>
+
+            <!-- 8U Server Space -->
+            <div id="service-2" class="service-card flex flex-col bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-xl ring-2 ring-blue-600 relative">
+                <div class="absolute top-0 right-0 -mt-3 mr-3">
+                    <span class="inline-flex items-center rounded-full bg-blue-600 px-3 py-1 text-sm font-medium text-white shadow-lg">POPULAR</span>
+                </div>
+                <div class="p-8 flex-grow">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 0 1-3-3m3 3a3 3 0 0 0 3 3h7.5a3 3 0 0 0 3-3m-13.5 0v-4.5a3 3 0 0 1 3-3h7.5a3 3 0 0 1 3 3v4.5m-13.5 0a3 3 0 0 1-3-3m0 0v-4.5a3 3 0 0 1 3-3h7.5a3 3 0 0 1 3 3v4.5m0 0v-4.5a3 3 0 0 0-3-3h-7.5a3 3 0 0 0-3 3v4.5m13.5 0v-4.5a3 3 0 0 0-3-3h-7.5a3 3 0 0 0-3 3v4.5" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h2 id="service-2-name" class="text-2xl font-semibold text-center text-gray-900 mb-2">8U Server Space</h2>
+                    <div class="text-center mb-6">
+                        <span id="service-2-price" class="text-4xl font-bold text-gray-900">৳16,000</span>
+                        <span class="text-gray-500">/mo</span>
+                    </div>
+                    <ul id="service-2-features" class="space-y-3 mb-8"></ul>
+                </div>
+                <div class="p-6 bg-gray-50">
+                    <button onclick="addToBasket('service-2')" class="block w-full text-center bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-md">
+                        Add to Basket
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 flex flex-col">
+                <p class="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-2">Facility Feature</p>
+                <h2 class="text-2xl font-semibold text-gray-900 mb-2">Square Feet Space</h2>
+                <p class="text-lg font-semibold text-blue-600 mb-4">৳1,200 <span class="text-gray-500 font-normal">/sq ft/mo</span></p>
+                <p class="text-gray-600 mb-4">Flexible floor layouts designed for custom cages, redundant power paths, and local security zoning.</p>
+                <ul class="space-y-2 text-gray-700">
+                    <li class="flex gap-2"><span class="text-blue-500">•</span>Custom floor space with flexible power</li>
+                    <li class="flex gap-2"><span class="text-blue-500">•</span>Scalable network, multiple IPs, 24/7 access</li>
+                    <li class="flex gap-2"><span class="text-blue-500">•</span>Climate control, security systems, cross connects</li>
+                    <li class="flex gap-2"><span class="text-blue-500">•</span>Redundant power and generator backup</li>
+                </ul>
+                <span class="mt-6 inline-flex items-center justify-center rounded-full border border-dashed border-gray-300 px-4 py-2 text-sm text-gray-500">Use Custom Builder</span>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 flex flex-col">
+                <p class="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-2">Network Feature</p>
+                <h2 class="text-2xl font-semibold text-gray-900 mb-2">Network Facility</h2>
+                <p class="text-lg font-semibold text-blue-600 mb-4">৳3,000 <span class="text-gray-500 font-normal">/mo</span></p>
+                <p class="text-gray-600 mb-4">Carrier-grade networking with proactive monitoring and a dedicated NOC team.</p>
+                <ul class="space-y-2 text-gray-700">
+                    <li class="flex gap-2"><span class="text-blue-500">•</span>Dedicated network with 1 Gbps bandwidth</li>
+                    <li class="flex gap-2"><span class="text-blue-500">•</span>BGP routing, DDoS protection, traffic monitoring</li>
+                    <li class="flex gap-2"><span class="text-blue-500">•</span>Peering access, redundant links, QoS tuning</li>
+                    <li class="flex gap-2"><span class="text-blue-500">•</span>24/7 network operations center support</li>
+                </ul>
+                <span class="mt-6 inline-flex items-center justify-center rounded-full border border-dashed border-gray-300 px-4 py-2 text-sm text-gray-500">Use Custom Builder</span>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 flex flex-col">
+                <p class="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-2">Connectivity Feature</p>
+                <h2 class="text-2xl font-semibold text-gray-900 mb-2">Public IP</h2>
+                <p class="text-lg font-semibold text-blue-600 mb-4">৳500 <span class="text-gray-500 font-normal">/mo</span></p>
+                <p class="text-gray-600 mb-4">Enterprise-grade IP resources with complete routing and security control.</p>
+                <ul class="space-y-2 text-gray-700">
+                    <li class="flex gap-2"><span class="text-blue-500">•</span>Static IPv4/IPv6 with reverse DNS</li>
+                    <li class="flex gap-2"><span class="text-blue-500">•</span>BGP announcement and DDoS protection</li>
+                    <li class="flex gap-2"><span class="text-blue-500">•</span>Traffic analysis, geo-location, whitelisting</li>
+                    <li class="flex gap-2"><span class="text-blue-500">•</span>Port management and IP reputation monitoring</li>
+                </ul>
+                <span class="mt-6 inline-flex items-center justify-center rounded-full border border-dashed border-gray-300 px-4 py-2 text-sm text-gray-500">Use Custom Builder</span>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 flex flex-col">
+                <p class="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-2">Environment Feature</p>
+                <h2 class="text-2xl font-semibold text-gray-900 mb-2">Dedicated Cooling</h2>
+                <p class="text-lg font-semibold text-blue-600 mb-4">৳1,800 <span class="text-gray-500 font-normal">/mo</span></p>
+                <p class="text-gray-600 mb-4">Precision cooling clusters engineered for mission-critical workloads.</p>
+                <ul class="space-y-2 text-gray-700">
+                    <li class="flex gap-2"><span class="text-blue-500">•</span>Temperature & humidity control with hot/cold aisle</li>
+                    <li class="flex gap-2"><span class="text-blue-500">•</span>Redundant, energy-efficient systems</li>
+                    <li class="flex gap-2"><span class="text-blue-500">•</span>Environmental monitoring & maintenance included</li>
+                    <li class="flex gap-2"><span class="text-blue-500">•</span>Emergency backup and 24/7 monitoring</li>
+                </ul>
+                <span class="mt-6 inline-flex items-center justify-center rounded-full border border-dashed border-gray-300 px-4 py-2 text-sm text-gray-500">Use Custom Builder</span>
+            </div>
+
+        </main>
+
+        <!-- Custom Datacenter Plan Builder -->
+        <div class="max-w-7xl mx-auto px-4 py-8 sm:py-12">
+            <div class="text-center mb-6 sm:mb-8">
+                <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-2">🛠️ Build Your Custom Datacenter Plan</h2>
+                <p class="text-sm sm:text-base text-gray-600">Configure datacenter resources according to your requirements</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Custom Datacenter Resources -->
+                <div class="lg:col-span-2">
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-4 sm:p-6">
+                        <h3 class="text-base sm:text-lg font-semibold text-gray-900 mb-4 sm:mb-6">Configure Datacenter Resources</h3>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                            <!-- Rack Units -->
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-2 text-sm font-medium text-gray-700">
+                                    <input type="checkbox" id="rack-enable" class="resource-toggle" checked>
+                                    <span>Rack Units (U)</span>
+                                </label>
+                                <div id="rack-controls" class="flex items-center space-x-2">
+                                    <input type="range" id="rack-range" min="1" max="42" value="2" class="flex-1">
+                                    <input type="number" id="rack-input" min="1" max="42" value="2" class="w-16 px-2 py-1 text-sm border border-gray-300 rounded">
+                                    <span class="text-sm font-medium w-8">U</span>
+                                </div>
+                                <div class="text-xs text-gray-500">Base: 1U, Price: ৳2,000/U</div>
+                            </div>
+
+                            <!-- Square Feet -->
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-2 text-sm font-medium text-gray-700">
+                                    <input type="checkbox" id="space-enable" class="resource-toggle" checked>
+                                    <span>Floor Space (sq ft)</span>
+                                </label>
+                                <div id="space-controls" class="flex items-center space-x-2">
+                                    <input type="range" id="space-range" min="10" max="1000" value="50" step="5" class="flex-1">
+                                    <input type="number" id="space-input" min="10" max="1000" value="50" step="5" class="w-20 px-2 py-1 text-sm border border-gray-300 rounded">
+                                    <span class="text-sm font-medium w-12">sq ft</span>
+                                </div>
+                                <div class="text-xs text-gray-500">Base: 10 sq ft, Price: ৳1,000/sq ft</div>
+                            </div>
+
+                            <!-- Public IPs -->
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-2 text-sm font-medium text-gray-700">
+                                    <input type="checkbox" id="ip-enable" class="resource-toggle" checked>
+                                    <span>Public IP Addresses</span>
+                                </label>
+                                <div id="ip-controls" class="flex items-center space-x-2">
+                                    <input type="range" id="ip-range" min="1" max="50" value="2" class="flex-1">
+                                    <input type="number" id="ip-input" min="1" max="50" value="2" class="w-16 px-2 py-1 text-sm border border-gray-300 rounded">
+                                    <span class="text-sm font-medium w-8">IPs</span>
+                                </div>
+                                <div class="text-xs text-gray-500">Base: 1 IP, Price: ৳400/IP</div>
+                            </div>
+
+                            <!-- Bandwidth -->
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-2 text-sm font-medium text-gray-700">
+                                    <input type="checkbox" id="bandwidth-enable" class="resource-toggle" checked>
+                                    <span>Bandwidth (Mbps)</span>
+                                </label>
+                                <div id="bandwidth-controls" class="flex items-center space-x-2">
+                                    <input type="range" id="dc-bandwidth-range" min="100" max="10000" value="1000" step="50" class="flex-1">
+                                    <input type="number" id="dc-bandwidth-input" min="100" max="10000" value="1000" step="50" class="w-20 px-2 py-1 text-sm border border-gray-300 rounded">
+                                    <span class="text-sm font-medium w-12">Mbps</span>
+                                </div>
+                                <div class="text-xs text-gray-500">Base: 100 Mbps, Price: ৳5/Mbps</div>
+                            </div>
+
+                            <!-- Power (Amps) -->
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-2 text-sm font-medium text-gray-700">
+                                    <input type="checkbox" id="power-enable" class="resource-toggle" checked>
+                                    <span>Power (Amps)</span>
+                                </label>
+                                <div id="power-controls" class="flex items-center space-x-2">
+                                    <input type="range" id="power-range" min="5" max="100" value="20" step="5" class="flex-1">
+                                    <input type="number" id="power-input" min="5" max="100" value="20" step="5" class="w-16 px-2 py-1 text-sm border border-gray-300 rounded">
+                                    <span class="text-sm font-medium w-8">A</span>
+                                </div>
+                                <div class="text-xs text-gray-500">Base: 5A, Price: ৳100/Amp</div>
+                            </div>
+                        </div>
+
+                        <!-- Datacenter Features -->
+                        <div class="mt-6 sm:mt-8">
+                            <h4 class="text-sm sm:text-md font-medium text-gray-900 mb-3 sm:mb-4">Datacenter Features & Services</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+                                <div class="space-y-3">
+                                    <label class="flex items-center space-x-3 p-2 sm:p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="cross-connect" class="dc-feature" data-price="500">
+                                        <span class="flex-1 text-sm sm:text-base">Cross Connect Service</span>
+                                        <span class="text-blue-600 font-medium text-sm sm:text-base">৳500</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-2 sm:p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="cctv-monitoring" class="dc-feature" data-price="600">
+                                        <span class="flex-1 text-sm sm:text-base">24/7 CCTV Monitoring</span>
+                                        <span class="text-blue-600 font-medium text-sm sm:text-base">৳600</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-2 sm:p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="fire-suppression" class="dc-feature" data-price="800">
+                                        <span class="flex-1 text-sm sm:text-base">Fire Suppression System</span>
+                                        <span class="text-blue-600 font-medium text-sm sm:text-base">৳800</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-2 sm:p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="remote-hands" class="dc-feature" data-price="1000">
+                                        <span class="flex-1 text-sm sm:text-base">Remote Hands Service</span>
+                                        <span class="text-blue-600 font-medium text-sm sm:text-base">৳1,000</span>
+                                    </label>
+                                </div>
+                                <div class="space-y-3">
+                                    <label class="flex items-center space-x-3 p-2 sm:p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="biometric-access" class="dc-feature" data-price="1200">
+                                        <span class="flex-1 text-sm sm:text-base">Biometric Access Control</span>
+                                        <span class="text-blue-600 font-medium text-sm sm:text-base">৳1,200</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-2 sm:p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="redundant-ups" class="dc-feature" data-price="1500">
+                                        <span class="flex-1 text-sm sm:text-base">Redundant UPS System</span>
+                                        <span class="text-blue-600 font-medium text-sm sm:text-base">৳1,500</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-2 sm:p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="managed-switch" class="dc-feature" data-price="1500">
+                                        <span class="flex-1 text-sm sm:text-base">Managed Network Switch</span>
+                                        <span class="text-blue-600 font-medium text-sm sm:text-base">৳1,500</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-2 sm:p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="generator-backup" class="dc-feature" data-price="2000">
+                                        <span class="flex-1 text-sm sm:text-base">Generator Backup</span>
+                                        <span class="text-blue-600 font-medium text-sm sm:text-base">৳2,000</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Datacenter Summary -->
+                <div>
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-4 sm:p-6 lg:sticky lg:top-24">
+                        <h4 class="text-base sm:text-lg font-semibold text-gray-900 mb-3 sm:mb-4">Custom Datacenter Summary</h4>
+                        
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span>Rack Units:</span>
+                                <span id="summary-rack" class="font-medium">2 U</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Floor Space:</span>
+                                <span id="summary-space" class="font-medium">50 sq ft</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Public IPs:</span>
+                                <span id="summary-ip" class="font-medium">2 IPs</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Bandwidth:</span>
+                                <span id="summary-dc-bandwidth" class="font-medium">1000 Mbps</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Power:</span>
+                                <span id="summary-power" class="font-medium">20 A</span>
+                            </div>
+                        </div>
+
+                        <hr class="my-4">
+                        
+                        <div id="dc-features-list" class="space-y-2 text-sm">
+                            <div class="text-gray-500 text-center">No additional features selected</div>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-sm">
+                                <span>Base Resources:</span>
+                                <span id="dc-base-cost" class="font-medium">৳0</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span>Additional Features:</span>
+                                <span id="dc-features-cost" class="font-medium">৳0</span>
+                            </div>
+                            <div class="flex justify-between items-center pt-2 border-t">
+                                <span class="font-semibold">Monthly Total:</span>
+                                <span id="dc-custom-total" class="font-bold text-lg text-blue-600">৳0</span>
+                            </div>
+                        </div>
+
+                        <button id="addCustomDatacenter" class="w-full bg-blue-600 text-white py-2 sm:py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors mt-4 sm:mt-6 text-sm sm:text-base">
+                            Add Custom Plan to Basket
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+        <div id="site-footer"></div>
+
+    <!-- Datacenter Page Script -->
+    <script>
+        const datacenterData = {
+            'bd': {
+                currency: '৳',
+                services: [
+                    { name: '1U Server Space', price: '2,500', features: ['1U Rack Space', '2A Power', '100 Mbps Network', '1 Public IP', '24/7 Monitoring', 'Basic Cooling', 'Physical Security', 'Remote Hands', 'Fire Suppression', 'UPS Backup'] },
+                    { name: '2U Server Space', price: '4,500', features: ['2U Rack Space', '4A Power', '200 Mbps Network', '2 Public IPs', '24/7 Monitoring', 'Enhanced Cooling', 'Physical Security', 'Remote Hands', 'Fire Suppression', 'UPS Backup'] },
+                    { name: '8U Server Space', price: '16,000', features: ['8U Rack Space', '16A Power', '1 Gbps Network', '8 Public IPs', '24/7 Monitoring', 'Premium Cooling', 'Physical Security', 'Remote Hands', 'Fire Suppression', 'UPS Backup', 'Redundant Power', 'Cross Connect'] },
+                    { name: 'Square Feet Space', price: '1,200', features: ['Custom Floor Space', 'Flexible Power', 'Scalable Network', 'Multiple IPs', '24/7 Access', 'Climate Control', 'Security Systems', 'Cross Connects', 'Redundant Power', 'Generator Backup'] },
+                    { name: 'Network Facility', price: '3,000', features: ['Dedicated Network', '1 Gbps Bandwidth', 'BGP Routing', 'DDoS Protection', 'Traffic Monitoring', 'Peering Access', 'Redundant Links', 'Network Management', 'Quality of Service', '24/7 NOC'] },
+                    { name: 'Public IP', price: '500', features: ['Static IP Address', 'IPv4 & IPv6', 'Reverse DNS', 'BGP Announcement', 'DDoS Protection', 'Traffic Analysis', 'Geo-location', 'Whitelisting', 'Port Management', 'IP Reputation'] },
+                    { name: 'Dedicated Cooling', price: '1,800', features: ['Precision Cooling', 'Temperature Control', 'Humidity Control', 'Hot/Cold Aisle', 'Redundant Systems', 'Energy Efficient', 'Environmental Monitoring', 'Maintenance Included', 'Emergency Backup', '24/7 Monitoring'] }
+                ]
+            },
+            'uae': {
+                currency: 'AED ',
+                services: [
+                    { name: '1U Server Space', price: '59', features: ['1U Rack Space', '2A Power', '100 Mbps Network', '1 Public IP', '24/7 Monitoring', 'Basic Cooling', 'Physical Security', 'Remote Hands', 'Fire Suppression', 'UPS Backup'] },
+                    { name: '2U Server Space', price: '109', features: ['2U Rack Space', '4A Power', '200 Mbps Network', '2 Public IPs', '24/7 Monitoring', 'Enhanced Cooling', 'Physical Security', 'Remote Hands', 'Fire Suppression', 'UPS Backup'] },
+                    { name: '8U Server Space', price: '399', features: ['8U Rack Space', '16A Power', '1 Gbps Network', '8 Public IPs', '24/7 Monitoring', 'Premium Cooling', 'Physical Security', 'Remote Hands', 'Fire Suppression', 'UPS Backup', 'Redundant Power', 'Cross Connect'] },
+                    { name: 'Square Feet Space', price: '29', features: ['Custom Floor Space', 'Flexible Power', 'Scalable Network', 'Multiple IPs', '24/7 Access', 'Climate Control', 'Security Systems', 'Cross Connects', 'Redundant Power', 'Generator Backup'] },
+                    { name: 'Network Facility', price: '79', features: ['Dedicated Network', '1 Gbps Bandwidth', 'BGP Routing', 'DDoS Protection', 'Traffic Monitoring', 'Peering Access', 'Redundant Links', 'Network Management', 'Quality of Service', '24/7 NOC'] },
+                    { name: 'Public IP', price: '15', features: ['Static IP Address', 'IPv4 & IPv6', 'Reverse DNS', 'BGP Announcement', 'DDoS Protection', 'Traffic Analysis', 'Geo-location', 'Whitelisting', 'Port Management', 'IP Reputation'] },
+                    { name: 'Dedicated Cooling', price: '45', features: ['Precision Cooling', 'Temperature Control', 'Humidity Control', 'Hot/Cold Aisle', 'Redundant Systems', 'Energy Efficient', 'Environmental Monitoring', 'Maintenance Included', 'Emergency Backup', '24/7 Monitoring'] }
+                ]
+            },
+            'eu': {
+                currency: '€',
+                services: [
+                    { name: '1U Server Space', price: '19.99', features: ['1U Rack Space', '2A Power', '100 Mbps Network', '1 Public IP', '24/7 Monitoring', 'Basic Cooling', 'Physical Security', 'Remote Hands', 'Fire Suppression', 'UPS Backup'] },
+                    { name: '2U Server Space', price: '34.99', features: ['2U Rack Space', '4A Power', '200 Mbps Network', '2 Public IPs', '24/7 Monitoring', 'Enhanced Cooling', 'Physical Security', 'Remote Hands', 'Fire Suppression', 'UPS Backup'] },
+                    { name: '8U Server Space', price: '129.99', features: ['8U Rack Space', '16A Power', '1 Gbps Network', '8 Public IPs', '24/7 Monitoring', 'Premium Cooling', 'Physical Security', 'Remote Hands', 'Fire Suppression', 'UPS Backup', 'Redundant Power', 'Cross Connect'] },
+                    { name: 'Square Feet Space', price: '9.99', features: ['Custom Floor Space', 'Flexible Power', 'Scalable Network', 'Multiple IPs', '24/7 Access', 'Climate Control', 'Security Systems', 'Cross Connects', 'Redundant Power', 'Generator Backup'] },
+                    { name: 'Network Facility', price: '24.99', features: ['Dedicated Network', '1 Gbps Bandwidth', 'BGP Routing', 'DDoS Protection', 'Traffic Monitoring', 'Peering Access', 'Redundant Links', 'Network Management', 'Quality of Service', '24/7 NOC'] },
+                    { name: 'Public IP', price: '4.99', features: ['Static IP Address', 'IPv4 & IPv6', 'Reverse DNS', 'BGP Announcement', 'DDoS Protection', 'Traffic Analysis', 'Geo-location', 'Whitelisting', 'Port Management', 'IP Reputation'] },
+                    { name: 'Dedicated Cooling', price: '14.99', features: ['Precision Cooling', 'Temperature Control', 'Humidity Control', 'Hot/Cold Aisle', 'Redundant Systems', 'Energy Efficient', 'Environmental Monitoring', 'Maintenance Included', 'Emergency Backup', '24/7 Monitoring'] }
+                ]
+            },
+            'us': {
+                currency: '$',
+                services: [
+                    { name: '1U Server Space', price: '17.99', features: ['1U Rack Space', '2A Power', '100 Mbps Network', '1 Public IP', '24/7 Monitoring', 'Basic Cooling', 'Physical Security', 'Remote Hands', 'Fire Suppression', 'UPS Backup'] },
+                    { name: '2U Server Space', price: '32.99', features: ['2U Rack Space', '4A Power', '200 Mbps Network', '2 Public IPs', '24/7 Monitoring', 'Enhanced Cooling', 'Physical Security', 'Remote Hands', 'Fire Suppression', 'UPS Backup'] },
+                    { name: '8U Server Space', price: '119.99', features: ['8U Rack Space', '16A Power', '1 Gbps Network', '8 Public IPs', '24/7 Monitoring', 'Premium Cooling', 'Physical Security', 'Remote Hands', 'Fire Suppression', 'UPS Backup', 'Redundant Power', 'Cross Connect'] },
+                    { name: 'Square Feet Space', price: '8.99', features: ['Custom Floor Space', 'Flexible Power', 'Scalable Network', 'Multiple IPs', '24/7 Access', 'Climate Control', 'Security Systems', 'Cross Connects', 'Redundant Power', 'Generator Backup'] },
+                    { name: 'Network Facility', price: '22.99', features: ['Dedicated Network', '1 Gbps Bandwidth', 'BGP Routing', 'DDoS Protection', 'Traffic Monitoring', 'Peering Access', 'Redundant Links', 'Network Management', 'Quality of Service', '24/7 NOC'] },
+                    { name: 'Public IP', price: '3.99', features: ['Static IP Address', 'IPv4 & IPv6', 'Reverse DNS', 'BGP Announcement', 'DDoS Protection', 'Traffic Analysis', 'Geo-location', 'Whitelisting', 'Port Management', 'IP Reputation'] },
+                    { name: 'Dedicated Cooling', price: '12.99', features: ['Precision Cooling', 'Temperature Control', 'Humidity Control', 'Hot/Cold Aisle', 'Redundant Systems', 'Energy Efficient', 'Environmental Monitoring', 'Maintenance Included', 'Emergency Backup', '24/7 Monitoring'] }
+                ]
+            },
+            'asia': {
+                currency: '$',
+                services: [
+                    { name: '1U Server Space', price: '14.99', features: ['1U Rack Space', '2A Power', '100 Mbps Network', '1 Public IP', '24/7 Monitoring', 'Basic Cooling', 'Physical Security', 'Remote Hands', 'Fire Suppression', 'UPS Backup'] },
+                    { name: '2U Server Space', price: '27.99', features: ['2U Rack Space', '4A Power', '200 Mbps Network', '2 Public IPs', '24/7 Monitoring', 'Enhanced Cooling', 'Physical Security', 'Remote Hands', 'Fire Suppression', 'UPS Backup'] },
+                    { name: '8U Server Space', price: '99.99', features: ['8U Rack Space', '16A Power', '1 Gbps Network', '8 Public IPs', '24/7 Monitoring', 'Premium Cooling', 'Physical Security', 'Remote Hands', 'Fire Suppression', 'UPS Backup', 'Redundant Power', 'Cross Connect'] },
+                    { name: 'Square Feet Space', price: '7.99', features: ['Custom Floor Space', 'Flexible Power', 'Scalable Network', 'Multiple IPs', '24/7 Access', 'Climate Control', 'Security Systems', 'Cross Connects', 'Redundant Power', 'Generator Backup'] },
+                    { name: 'Network Facility', price: '19.99', features: ['Dedicated Network', '1 Gbps Bandwidth', 'BGP Routing', 'DDoS Protection', 'Traffic Monitoring', 'Peering Access', 'Redundant Links', 'Network Management', 'Quality of Service', '24/7 NOC'] },
+                    { name: 'Public IP', price: '2.99', features: ['Static IP Address', 'IPv4 & IPv6', 'Reverse DNS', 'BGP Announcement', 'DDoS Protection', 'Traffic Analysis', 'Geo-location', 'Whitelisting', 'Port Management', 'IP Reputation'] },
+                    { name: 'Dedicated Cooling', price: '11.99', features: ['Precision Cooling', 'Temperature Control', 'Humidity Control', 'Hot/Cold Aisle', 'Redundant Systems', 'Energy Efficient', 'Environmental Monitoring', 'Maintenance Included', 'Emergency Backup', '24/7 Monitoring'] }
+                ]
+            },
+            'africa': {
+                currency: '$',
+                services: [
+                    { name: '1U Server Space', price: '19.99', features: ['1U Rack Space', '2A Power', '100 Mbps Network', '1 Public IP', '24/7 Monitoring', 'Basic Cooling', 'Physical Security', 'Remote Hands', 'Fire Suppression', 'UPS Backup'] },
+                    { name: '2U Server Space', price: '36.99', features: ['2U Rack Space', '4A Power', '200 Mbps Network', '2 Public IPs', '24/7 Monitoring', 'Enhanced Cooling', 'Physical Security', 'Remote Hands', 'Fire Suppression', 'UPS Backup'] },
+                    { name: '8U Server Space', price: '139.99', features: ['8U Rack Space', '16A Power', '1 Gbps Network', '8 Public IPs', '24/7 Monitoring', 'Premium Cooling', 'Physical Security', 'Remote Hands', 'Fire Suppression', 'UPS Backup', 'Redundant Power', 'Cross Connect'] },
+                    { name: 'Square Feet Space', price: '10.99', features: ['Custom Floor Space', 'Flexible Power', 'Scalable Network', 'Multiple IPs', '24/7 Access', 'Climate Control', 'Security Systems', 'Cross Connects', 'Redundant Power', 'Generator Backup'] },
+                    { name: 'Network Facility', price: '26.99', features: ['Dedicated Network', '1 Gbps Bandwidth', 'BGP Routing', 'DDoS Protection', 'Traffic Monitoring', 'Peering Access', 'Redundant Links', 'Network Management', 'Quality of Service', '24/7 NOC'] },
+                    { name: 'Public IP', price: '4.99', features: ['Static IP Address', 'IPv4 & IPv6', 'Reverse DNS', 'BGP Announcement', 'DDoS Protection', 'Traffic Analysis', 'Geo-location', 'Whitelisting', 'Port Management', 'IP Reputation'] },
+                    { name: 'Dedicated Cooling', price: '15.99', features: ['Precision Cooling', 'Temperature Control', 'Humidity Control', 'Hot/Cold Aisle', 'Redundant Systems', 'Energy Efficient', 'Environmental Monitoring', 'Maintenance Included', 'Emergency Backup', '24/7 Monitoring'] }
+                ]
+            }
+        };
+
+        function createFeatureHTML(feature) {
+            return `
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 text-green-500 mr-2.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-gray-700">${feature}</span>
+                </li>
+            `;
+        }
+
+        let currentRegion = 'bd';
+
+        function showRegion(regionKey) {
+            const regionData = datacenterData[regionKey];
+            if (!regionData) return;
+
+            currentRegion = regionKey;
+
+            regionData.services.forEach((service, index) => {
+                document.getElementById(`service-${index}-name`).textContent = service.name;
+                document.getElementById(`service-${index}-price`).textContent = regionData.currency + service.price;
+                
+                const featuresList = document.getElementById(`service-${index}-features`);
+                featuresList.innerHTML = '';
+                service.features.forEach(feature => {
+                    featuresList.innerHTML += createFeatureHTML(feature);
+                });
+            });
+
+            const buttons = document.querySelectorAll('.region-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById(`btn-${regionKey}`).classList.add('active');
+        }
+
+        function addToBasket(serviceId) {
+            const serviceIndex = parseInt(serviceId.split('-')[1]);
+            const regionData = datacenterData[currentRegion];
+            const service = regionData.services[serviceIndex];
+            
+            const item = {
+                id: 'datacenter-' + serviceId + '-' + Date.now(),
+                name: service.name,
+                type: 'Datacenter Facility',
+                region: currentRegion,
+                price: regionData.currency + service.price
+            };
+            
+            basket.addItem(item);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showRegion('bd');
+
+            // Custom Datacenter Builder functionality
+            function updateCustomDatacenter() {
+                const regionData = datacenterData[currentRegion];
+                const currency = regionData.currency;
+                
+                // Check which resources are enabled
+                const rackEnabled = document.getElementById('rack-enable').checked;
+                const spaceEnabled = document.getElementById('space-enable').checked;
+                const ipEnabled = document.getElementById('ip-enable').checked;
+                const bandwidthEnabled = document.getElementById('bandwidth-enable').checked;
+                const powerEnabled = document.getElementById('power-enable').checked;
+                
+                // Get resource values
+                const rack = rackEnabled ? parseInt(document.getElementById('rack-range').value) : 0;
+                const space = spaceEnabled ? parseInt(document.getElementById('space-range').value) : 0;
+                const ips = ipEnabled ? parseInt(document.getElementById('ip-range').value) : 0;
+                const bandwidth = bandwidthEnabled ? parseInt(document.getElementById('dc-bandwidth-range').value) : 0;
+                const power = powerEnabled ? parseInt(document.getElementById('power-range').value) : 0;
+                
+                // Sync input fields
+                document.getElementById('rack-input').value = document.getElementById('rack-range').value;
+                document.getElementById('space-input').value = document.getElementById('space-range').value;
+                document.getElementById('ip-input').value = document.getElementById('ip-range').value;
+                document.getElementById('dc-bandwidth-input').value = document.getElementById('dc-bandwidth-range').value;
+                document.getElementById('power-input').value = document.getElementById('power-range').value;
+                
+                // Update summary
+                document.getElementById('summary-rack').textContent = rackEnabled ? rack + ' U' : 'Not selected';
+                document.getElementById('summary-space').textContent = spaceEnabled ? space + ' sq ft' : 'Not selected';
+                document.getElementById('summary-ip').textContent = ipEnabled ? ips + ' IPs' : 'Not selected';
+                document.getElementById('summary-dc-bandwidth').textContent = bandwidthEnabled ? bandwidth + ' Mbps' : 'Not selected';
+                document.getElementById('summary-power').textContent = powerEnabled ? power + ' A' : 'Not selected';
+                
+                // Calculate base cost
+                let baseCost = 500; // Base datacenter cost
+                if (rackEnabled) baseCost += (rack - 1) * 2000; // Rack: ৳2,000/U after first
+                if (spaceEnabled) baseCost += Math.max(0, (space - 10)) * 100; // Space: ৳100/sq ft after first 10
+                if (ipEnabled) baseCost += (ips - 1) * 400; // IPs: ৳400/IP after first
+                if (bandwidthEnabled) baseCost += Math.max(0, (bandwidth - 100)) * 5; // Bandwidth: ৳5/Mbps after first 100
+                if (powerEnabled) baseCost += (power - 5) * 100; // Power: ৳100/Amp after first 5A
+                
+                // Calculate features cost
+                let featuresCost = 0;
+                const featuresList = [];
+                document.querySelectorAll('.dc-feature:checked').forEach(feature => {
+                    const price = parseInt(feature.dataset.price);
+                    featuresCost += price;
+                    const label = feature.parentElement.querySelector('span').textContent;
+                    featuresList.push(`<div class="flex justify-between"><span>${label}</span><span>${currency}${price}</span></div>`);
+                });
+                
+                // Update costs display
+                document.getElementById('dc-base-cost').textContent = currency + baseCost;
+                document.getElementById('dc-features-cost').textContent = currency + featuresCost;
+                document.getElementById('dc-custom-total').textContent = currency + (baseCost + featuresCost);
+                
+                // Update features list
+                const featuresListEl = document.getElementById('dc-features-list');
+                if (featuresList.length > 0) {
+                    featuresListEl.innerHTML = featuresList.join('');
+                } else {
+                    featuresListEl.innerHTML = '<div class="text-gray-500 text-center">No additional features selected</div>';
+                }
+            }
+            
+            // Initialize datacenter custom plan builder
+            document.querySelectorAll('#rack-range, #space-range, #ip-range, #dc-bandwidth-range, #power-range').forEach(slider => {
+                slider.addEventListener('input', updateCustomDatacenter);
+            });
+            
+            // Handle resource toggles
+            document.querySelectorAll('.resource-toggle').forEach(toggle => {
+                toggle.addEventListener('change', function() {
+                    const controlId = this.id.replace('-enable', '-controls');
+                    const controls = document.getElementById(controlId);
+                    if (controls) {
+                        controls.style.opacity = this.checked ? '1' : '0.5';
+                        controls.style.pointerEvents = this.checked ? 'auto' : 'none';
+                    }
+                    updateCustomDatacenter();
+                });
+            });
+            
+            // Sync number inputs with sliders
+            document.getElementById('rack-input').addEventListener('input', function() {
+                document.getElementById('rack-range').value = this.value;
+                updateCustomDatacenter();
+            });
+            document.getElementById('space-input').addEventListener('input', function() {
+                document.getElementById('space-range').value = this.value;
+                updateCustomDatacenter();
+            });
+            document.getElementById('ip-input').addEventListener('input', function() {
+                document.getElementById('ip-range').value = this.value;
+                updateCustomDatacenter();
+            });
+            document.getElementById('dc-bandwidth-input').addEventListener('input', function() {
+                document.getElementById('dc-bandwidth-range').value = this.value;
+                updateCustomDatacenter();
+            });
+            document.getElementById('power-input').addEventListener('input', function() {
+                document.getElementById('power-range').value = this.value;
+                updateCustomDatacenter();
+            });
+            
+            document.querySelectorAll('.dc-feature').forEach(checkbox => {
+                checkbox.addEventListener('change', updateCustomDatacenter);
+            });
+            
+            // Auto-sort features by price (lowest first)
+            function sortFeaturesByPrice() {
+                const containers = document.querySelectorAll('.grid.grid-cols-1.md\\:grid-cols-2 .space-y-3');
+                containers.forEach(container => {
+                    const labels = Array.from(container.querySelectorAll('label'));
+                    labels.sort((a, b) => {
+                        const priceA = parseInt(a.querySelector('input').dataset.price || '0');
+                        const priceB = parseInt(b.querySelector('input').dataset.price || '0');
+                        return priceA - priceB;
+                    });
+                    labels.forEach(label => container.appendChild(label));
+                });
+            }
+            sortFeaturesByPrice();
+            
+            // Custom datacenter plan to basket
+            document.getElementById('addCustomDatacenter').addEventListener('click', () => {
+                const customDatacenterPlan = {
+                    id: 'custom-datacenter-' + Date.now(),
+                    name: 'Custom Datacenter Plan',
+                    type: 'Custom Datacenter Facility',
+                    region: currentRegion,
+                    price: document.getElementById('dc-custom-total').textContent
+                };
+                
+                basket.addItem(customDatacenterPlan);
+            });
+            
+            // Initialize custom datacenter
+            updateCustomDatacenter();
+            
+            // Re-sort when region changes
+            const originalShowRegion = window.showRegion;
+            window.showRegion = function(regionKey) {
+                originalShowRegion(regionKey);
+                setTimeout(sortFeaturesByPrice, 10);
+            };
+        });
+    </script>
+
+    <script src="js/components.js"></script>
+
+</body>
+</html>
+
+

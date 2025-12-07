@@ -1,0 +1,668 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Mail Hosting - BAR & Associates</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/basket.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .region-btn.active {
+            background-color: #2563EB;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased" data-page="services" data-service="corporate-mail">
+
+    <div id="site-nav"></div>
+
+
+    <!-- Container for content -->
+    <div class="container mx-auto px-4 py-12 md:py-20">
+
+        <!-- Header -->
+        <header class="text-center max-w-3xl mx-auto mb-12">
+            <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+                📧 Corporate Mail Hosting
+            </h1>
+            <p class="text-lg text-gray-600">
+                Professional, domain-based email with IMAP/POP/SMTP, webmail, and mobile sync. Built-in SPF/DKIM/DMARC, advanced spam/virus filtering, 2FA, and team admin controls. Shared calendar/contacts, aliases & groups, plus archiving and backup options.
+            </p>
+        </header>
+
+        <!-- Region Switcher -->
+        <nav class="flex flex-wrap justify-center gap-2 mb-12">
+            <button id="btn-bd" class="region-btn active text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('bd')">
+                🇧🇩 Bangladesh
+            </button>
+            <button id="btn-uae" class="region-btn text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('uae')">
+                Middle East
+            </button>
+            <button id="btn-eu" class="region-btn text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('eu')">
+                🇪🇺 Europe
+            </button>
+            <button id="btn-us" class="region-btn text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('us')">
+                🇺🇸 United States
+            </button>
+            <button id="btn-asia" class="region-btn text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('asia')">
+                🌏 Asia
+            </button>
+            <button id="btn-africa" class="region-btn text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('africa')">
+                🌍 Africa
+            </button>
+        </nav>
+
+        <!-- Mail Plans Section -->
+        <div class="max-w-6xl mx-auto mb-16">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">Corporate Email Plans</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Starter Plan -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+                    <div class="p-8">
+                        <div class="flex justify-center mb-6">
+                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
+                                <svg class="w-8 h-8 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center text-gray-900 mb-2">Starter Mail</h3>
+                        <div class="text-center mb-6">
+                            <span id="starter-price" class="text-3xl font-bold text-gray-900">৳300</span>
+                            <span class="text-gray-500">/user/month</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">5GB Mailbox Storage</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">IMAP/POP/SMTP Access</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">Webmail Interface</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">Mobile Sync</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">Basic Spam Filter</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                        <button class="mail-buy-btn block w-full text-center bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-green-700 hover:shadow-md" data-type="Starter Mail" data-price="300">
+                            Choose Starter &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Business Plan -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden ring-2 ring-blue-600 relative">
+                    <div class="absolute top-0 right-0 -mt-3 mr-3">
+                        <span class="inline-flex items-center rounded-full bg-blue-600 px-3 py-1 text-sm font-medium text-white shadow-lg">POPULAR</span>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-center mb-6">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                                <svg class="w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center text-gray-900 mb-2">Business Mail</h3>
+                        <div class="text-center mb-6">
+                            <span id="business-price" class="text-3xl font-bold text-gray-900">৳600</span>
+                            <span class="text-gray-500">/user/month</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">25GB Mailbox Storage</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">SPF/DKIM/DMARC</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">Advanced Spam/Virus Filter</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">Shared Calendar</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">Email Aliases (5)</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">2FA Security</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                        <button class="mail-buy-btn block w-full text-center bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-md" data-type="Business Mail" data-price="600">
+                            Choose Business &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+                    <div class="p-8">
+                        <div class="flex justify-center mb-6">
+                            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center">
+                                <svg class="w-8 h-8 text-purple-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center text-gray-900 mb-2">Enterprise Mail</h3>
+                        <div class="text-center mb-6">
+                            <span id="enterprise-price" class="text-3xl font-bold text-gray-900">৳1,200</span>
+                            <span class="text-gray-500">/user/month</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">100GB Mailbox Storage</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">Team Admin Controls</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">Email Archiving</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">Auto Backup</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">Unlimited Aliases</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">Priority Support</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                        <button class="mail-buy-btn block w-full text-center bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-purple-700 hover:shadow-md" data-type="Enterprise Mail" data-price="1200">
+                            Choose Enterprise &rarr;
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="max-w-6xl mx-auto mb-16">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">Email Features & Security</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Security Features -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.623 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Advanced Security</h3>
+                    <p class="text-sm text-gray-600 mb-4">SPF, DKIM, DMARC authentication with 2FA and advanced spam/virus filtering</p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Email encryption</li>
+                        <li>• Anti-phishing protection</li>
+                        <li>• Secure SMTP/TLS</li>
+                    </ul>
+                </div>
+
+                <!-- Collaboration -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" /></svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Team Collaboration</h3>
+                    <p class="text-sm text-gray-600 mb-4">Shared calendars, contacts, and team management tools</p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Shared address books</li>
+                        <li>• Group calendars</li>
+                        <li>• Distribution lists</li>
+                    </ul>
+                </div>
+
+                <!-- Mobile & Access -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" /></svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Mobile & Access</h3>
+                    <p class="text-sm text-gray-600 mb-4">Full mobile sync with IMAP/POP/SMTP and webmail access</p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• iOS/Android sync</li>
+                        <li>• Outlook compatible</li>
+                        <li>• Webmail interface</li>
+                    </ul>
+                </div>
+
+                <!-- Backup & Archive -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-purple-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" /></svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Backup & Archive</h3>
+                    <p class="text-sm text-gray-600 mb-4">Automated backup and email archiving for compliance</p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Daily auto backup</li>
+                        <li>• Email archiving</li>
+                        <li>• Data retention</li>
+                    </ul>
+                </div>
+
+                <!-- Admin Controls -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                    <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-orange-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Admin Controls</h3>
+                    <p class="text-sm text-gray-600 mb-4">Comprehensive team management and administrative tools</p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• User management</li>
+                        <li>• Policy controls</li>
+                        <li>• Usage reports</li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">24/7 Support</h3>
+                    <p class="text-sm text-gray-600 mb-4">Round-the-clock technical support and migration assistance</p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Email migration</li>
+                        <li>• Setup assistance</li>
+                        <li>• Technical support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Custom Mail Builder -->
+        <div class="max-w-7xl mx-auto px-4 py-12">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-2">🛠️ Build Your Custom Corporate Mail Plan</h2>
+                <p class="text-gray-600">Configure email resources and features according to your business needs</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Custom Mail Configuration -->
+                <div class="lg:col-span-2">
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-6">Configure Email Resources</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Number of Users -->
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Number of Users</label>
+                                <div class="flex items-center space-x-2">
+                                    <input type="range" id="mail-users-range" min="1" max="500" value="10" class="flex-1">
+                                    <input type="number" id="mail-users-input" min="1" max="500" value="10" class="w-16 px-2 py-1 text-sm border border-gray-300 rounded">
+                                    <span class="text-sm font-medium w-12">Users</span>
+                                </div>
+                                <div class="text-xs text-gray-500">Base: 1 User, Price: ৳200/User</div>
+                            </div>
+
+                            <!-- Mailbox Size -->
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Mailbox Size (per user)</label>
+                                <div class="flex items-center space-x-2">
+                                    <input type="range" id="mail-storage-range" min="1" max="100" value="10" class="flex-1">
+                                    <input type="number" id="mail-storage-input" min="1" max="100" value="10" class="w-16 px-2 py-1 text-sm border border-gray-300 rounded">
+                                    <span class="text-sm font-medium w-8">GB</span>
+                                </div>
+                                <div class="text-xs text-gray-500">Base: 1GB, Price: ৳20/GB</div>
+                            </div>
+
+                            <!-- Email Aliases -->
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Email Aliases (per user)</label>
+                                <div class="flex items-center space-x-2">
+                                    <input type="range" id="aliases-range" min="1" max="50" value="5" class="flex-1">
+                                    <input type="number" id="aliases-input" min="1" max="50" value="5" class="w-16 px-2 py-1 text-sm border border-gray-300 rounded">
+                                    <span class="text-sm font-medium w-16">Aliases</span>
+                                </div>
+                                <div class="text-xs text-gray-500">Base: 1 Alias, Price: ৳10/Alias</div>
+                            </div>
+
+                            <!-- Archive Storage -->
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Archive Storage</label>
+                                <div class="flex items-center space-x-2">
+                                    <input type="range" id="archive-range" min="0" max="1000" value="50" step="10" class="flex-1">
+                                    <input type="number" id="archive-input" min="0" max="1000" value="50" step="10" class="w-16 px-2 py-1 text-sm border border-gray-300 rounded">
+                                    <span class="text-sm font-medium w-8">GB</span>
+                                </div>
+                                <div class="text-xs text-gray-500">Optional, Price: ৳5/GB</div>
+                            </div>
+                        </div>
+
+                        <!-- Mail Features -->
+                        <div class="mt-8">
+                            <h4 class="text-md font-medium text-gray-900 mb-4">Email Features & Add-ons</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="space-y-3">
+                                    <label class="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="shared-calendars" class="mail-feature" data-price="0">
+                                        <span class="flex-1">Shared Calendars & Contacts</span>
+                                        <span class="text-green-600 font-medium">Free</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="mail-migration" class="mail-feature" data-price="0">
+                                        <span class="flex-1">Free Email Migration</span>
+                                        <span class="text-green-600 font-medium">Free</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="advanced-security" class="mail-feature" data-price="150">
+                                        <span class="flex-1">Advanced Security (ATP)</span>
+                                        <span class="text-blue-600 font-medium">৳150</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="mobile-device-mgmt" class="mail-feature" data-price="100">
+                                        <span class="flex-1">Mobile Device Management</span>
+                                        <span class="text-blue-600 font-medium">৳100</span>
+                                    </label>
+                                </div>
+                                <div class="space-y-3">
+                                    <label class="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="mail-encryption" class="mail-feature" data-price="200">
+                                        <span class="flex-1">Email Encryption (S/MIME)</span>
+                                        <span class="text-blue-600 font-medium">৳200</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="mail-priority-support" class="mail-feature" data-price="250">
+                                        <span class="flex-1">Priority Support</span>
+                                        <span class="text-blue-600 font-medium">৳250</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="compliance-archiving" class="mail-feature" data-price="300">
+                                        <span class="flex-1">Compliance & Legal Hold</span>
+                                        <span class="text-blue-600 font-medium">৳300</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="mail-api" class="mail-feature" data-price="120">
+                                        <span class="flex-1">API Access & Integration</span>
+                                        <span class="text-blue-600 font-medium">৳120</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Mail Summary -->
+                <div>
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 sticky top-24">
+                        <h4 class="text-lg font-semibold text-gray-900 mb-4">Custom Mail Summary</h4>
+                        
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span>Users:</span>
+                                <span id="summary-mail-users" class="font-medium">10 Users</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Mailbox Size:</span>
+                                <span id="summary-mail-storage" class="font-medium">10 GB/user</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Email Aliases:</span>
+                                <span id="summary-aliases" class="font-medium">5/user</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Archive Storage:</span>
+                                <span id="summary-archive" class="font-medium">50 GB</span>
+                            </div>
+                        </div>
+
+                        <hr class="my-4">
+                        
+                        <div id="mail-features-list" class="space-y-2 text-sm">
+                            <div class="text-gray-500 text-center">No additional features selected</div>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-sm">
+                                <span>Base Resources:</span>
+                                <span id="mail-base-cost" class="font-medium">৳0</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span>Additional Features:</span>
+                                <span id="mail-features-cost" class="font-medium">৳0</span>
+                            </div>
+                            <div class="flex justify-between items-center pt-2 border-t">
+                                <span class="font-semibold">Monthly Total:</span>
+                                <span id="mail-custom-total" class="font-bold text-lg text-blue-600">৳0</span>
+                            </div>
+                        </div>
+
+                        <button id="addCustomMail" class="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors mt-6">
+                            Add Custom Mail to Basket
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+        <div id="site-footer"></div>
+
+    <!-- Corporate Mail Script -->
+    <script>
+        const mailPricing = {
+            'bd': {
+                currency: '৳',
+                plans: { starter: '300', business: '600', enterprise: '1,200' }
+            },
+            'uae': {
+                currency: 'AED ',
+                plans: { starter: '7.5', business: '15', enterprise: '30' }
+            },
+            'eu': {
+                currency: '€',
+                plans: { starter: '2.99', business: '5.99', enterprise: '11.99' }
+            },
+            'us': {
+                currency: '$',
+                plans: { starter: '2.99', business: '5.99', enterprise: '11.99' }
+            },
+            'asia': {
+                currency: '$',
+                plans: { starter: '2.49', business: '4.99', enterprise: '9.99' }
+            },
+            'africa': {
+                currency: '$',
+                plans: { starter: '3.50', business: '6.50', enterprise: '12.50' }
+            }
+        };
+
+        let currentRegion = 'bd';
+
+        function showRegion(regionKey) {
+            currentRegion = regionKey;
+            const regionData = mailPricing[regionKey];
+            const currency = regionData.currency;
+
+            // Update plan prices
+            document.getElementById('starter-price').textContent = currency + regionData.plans.starter;
+            document.getElementById('business-price').textContent = currency + regionData.plans.business;
+            document.getElementById('enterprise-price').textContent = currency + regionData.plans.enterprise;
+
+            // Update region buttons
+            document.querySelectorAll('.region-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(`btn-${regionKey}`).classList.add('active');
+        }
+
+        // Mail plan buy buttons
+        document.querySelectorAll('.mail-buy-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const mailType = this.dataset.type;
+                const planKey = mailType.toLowerCase().split(' ')[0];
+                const price = mailPricing[currentRegion].plans[planKey];
+                
+                const mailItem = {
+                    id: 'mail-' + Date.now(),
+                    name: `Corporate Mail: ${mailType}`,
+                    type: 'Corporate Mail Hosting',
+                    region: currentRegion,
+                    price: mailPricing[currentRegion].currency + price + '/user/month'
+                };
+                
+                basket.addItem(mailItem);
+            });
+        });
+
+        // Custom Mail Builder functionality
+        function updateCustomMail() {
+            const regionData = mailPricing[currentRegion];
+            const currency = regionData.currency;
+            
+            // Get resource values
+            const users = parseInt(document.getElementById('mail-users-range').value);
+            const storage = parseInt(document.getElementById('mail-storage-range').value);
+            const aliases = parseInt(document.getElementById('aliases-range').value);
+            const archive = parseInt(document.getElementById('archive-range').value);
+            
+            // Sync input fields
+            document.getElementById('mail-users-input').value = users;
+            document.getElementById('mail-storage-input').value = storage;
+            document.getElementById('aliases-input').value = aliases;
+            document.getElementById('archive-input').value = archive;
+            
+            // Update summary
+            document.getElementById('summary-mail-users').textContent = users + (users === 1 ? ' User' : ' Users');
+            document.getElementById('summary-mail-storage').textContent = storage + ' GB/user';
+            document.getElementById('summary-aliases').textContent = aliases + '/user';
+            document.getElementById('summary-archive').textContent = archive + ' GB';
+            
+            // Calculate base cost
+            let baseCost = 200; // Base mail cost for first user
+            baseCost += (users - 1) * 200; // Users: ৳200/user after first user
+            baseCost += (storage - 1) * 20; // Storage: ৳20/GB after first GB
+            baseCost += (aliases - 1) * 10; // Aliases: ৳10/alias after first alias
+            baseCost += archive * 5; // Archive: ৳5/GB
+            
+            // Calculate features cost
+            let featuresCost = 0;
+            const featuresList = [];
+            document.querySelectorAll('.mail-feature:checked').forEach(feature => {
+                const price = parseInt(feature.dataset.price);
+                featuresCost += price;
+                const label = feature.parentElement.querySelector('span').textContent;
+                if (price > 0) {
+                    featuresList.push(`<div class="flex justify-between"><span>${label}</span><span>${currency}${price}</span></div>`);
+                } else {
+                    featuresList.push(`<div class="flex justify-between"><span>${label}</span><span class="text-green-600">Free</span></div>`);
+                }
+            });
+            
+            // Update costs display
+            document.getElementById('mail-base-cost').textContent = currency + baseCost;
+            document.getElementById('mail-features-cost').textContent = currency + featuresCost;
+            document.getElementById('mail-custom-total').textContent = currency + (baseCost + featuresCost);
+            
+            // Update features list
+            const featuresListEl = document.getElementById('mail-features-list');
+            if (featuresList.length > 0) {
+                featuresListEl.innerHTML = featuresList.join('');
+            } else {
+                featuresListEl.innerHTML = '<div class="text-gray-500 text-center">No additional features selected</div>';
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            showRegion('bd');
+            
+            // Initialize mail custom plan builder
+            document.querySelectorAll('#mail-users-range, #mail-storage-range, #aliases-range, #archive-range').forEach(slider => {
+                slider.addEventListener('input', updateCustomMail);
+            });
+            
+            // Sync number inputs with sliders
+            document.getElementById('mail-users-input').addEventListener('input', function() {
+                document.getElementById('mail-users-range').value = this.value;
+                updateCustomMail();
+            });
+            document.getElementById('mail-storage-input').addEventListener('input', function() {
+                document.getElementById('mail-storage-range').value = this.value;
+                updateCustomMail();
+            });
+            document.getElementById('aliases-input').addEventListener('input', function() {
+                document.getElementById('aliases-range').value = this.value;
+                updateCustomMail();
+            });
+            document.getElementById('archive-input').addEventListener('input', function() {
+                document.getElementById('archive-range').value = this.value;
+                updateCustomMail();
+            });
+            
+            document.querySelectorAll('.mail-feature').forEach(checkbox => {
+                checkbox.addEventListener('change', updateCustomMail);
+            });
+            
+            // Auto-sort features by price (free items first)
+            function sortFeaturesByPrice() {
+                const containers = document.querySelectorAll('.grid.grid-cols-1.md\\:grid-cols-2 .space-y-3');
+                containers.forEach(container => {
+                    const labels = Array.from(container.querySelectorAll('label'));
+                    labels.sort((a, b) => {
+                        const priceA = parseInt(a.querySelector('input').dataset.price || '0');
+                        const priceB = parseInt(b.querySelector('input').dataset.price || '0');
+                        return priceA - priceB;
+                    });
+                    labels.forEach(label => container.appendChild(label));
+                });
+            }
+            sortFeaturesByPrice();
+            
+            // Custom mail plan to basket
+            document.getElementById('addCustomMail').addEventListener('click', () => {
+                const customMailPlan = {
+                    id: 'custom-mail-' + Date.now(),
+                    name: 'Custom Corporate Mail Plan',
+                    type: 'Custom Corporate Mail',
+                    region: currentRegion,
+                    price: document.getElementById('mail-custom-total').textContent
+                };
+                
+                basket.addItem(customMailPlan);
+            });
+            
+            // Initialize custom mail
+            updateCustomMail();
+            
+            // Re-sort when region changes
+            const originalShowRegion = window.showRegion;
+            window.showRegion = function(regionKey) {
+                originalShowRegion(regionKey);
+                setTimeout(sortFeaturesByPrice, 10);
+            };
+        });
+    </script>
+
+    <script src="js/components.js"></script>
+
+</body>
+</html>
+
+

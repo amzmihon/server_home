@@ -1,0 +1,513 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain + SSL Services - BAR & Associates</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/basket.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .region-btn.active {
+            background-color: #2563EB;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased" data-page="services" data-service="domain-ssl">
+
+    <div id="site-nav"></div>
+
+
+    <!-- Container for content -->
+    <div class="container mx-auto px-4 py-12 md:py-20">
+
+        <!-- Header -->
+        <header class="text-center max-w-3xl mx-auto mb-12">
+            <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+                🌐 Domain + SSL Services
+            </h1>
+            <p class="text-lg text-gray-600">
+                End-to-end domain registration and management with DNS, WHOIS privacy, and renewal reminders. Trusted SSL (DV/OV/EV) with guided CSR, installation, auto-renewals, and HSTS/redirect hardening for secure, professional sites.
+            </p>
+        </header>
+
+        <!-- Region Switcher -->
+        <nav class="flex flex-wrap justify-center gap-2 mb-12">
+            <button id="btn-bd" class="region-btn active text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('bd')">
+                🇧🇩 Bangladesh
+            </button>
+            <button id="btn-uae" class="region-btn text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('uae')">
+                Middle East
+            </button>
+            <button id="btn-eu" class="region-btn text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('eu')">
+                🇪🇺 Europe
+            </button>
+            <button id="btn-us" class="region-btn text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('us')">
+                🇺🇸 United States
+            </button>
+            <button id="btn-asia" class="region-btn text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('asia')">
+                🌏 Asia
+            </button>
+            <button id="btn-africa" class="region-btn text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('africa')">
+                🌍 Africa
+            </button>
+        </nav>
+
+        <!-- Domain Search Section -->
+        <div class="max-w-4xl mx-auto mb-16">
+            <div class="bg-white rounded-2xl shadow-lg border border-gray-200 p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">🔍 Domain Search & Registration</h2>
+                
+                <div class="flex flex-col md:flex-row gap-4 mb-6">
+                    <div class="flex-1">
+                        <input type="text" id="domain-search" placeholder="Enter your domain name (e.g., example.com)" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <button id="search-btn" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+                        Search Domain
+                    </button>
+                </div>
+
+                <div id="search-results" class="hidden">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Search Results</h3>
+                    <div id="domain-results" class="space-y-3"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Domain Pricing -->
+        <div class="max-w-6xl mx-auto mb-16">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">Domain Registration Pricing</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Popular TLDs -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Popular Domains</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium">.com</span>
+                            <span id="com-price" class="text-blue-600 font-semibold">৳1,200/yr</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium">.net</span>
+                            <span id="net-price" class="text-blue-600 font-semibold">৳1,400/yr</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium">.org</span>
+                            <span id="org-price" class="text-blue-600 font-semibold">৳1,300/yr</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium">.info</span>
+                            <span id="info-price" class="text-blue-600 font-semibold">৳1,100/yr</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Country TLDs -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Country Domains</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium">.bd</span>
+                            <span id="bd-price" class="text-blue-600 font-semibold">৳2,500/yr</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium">.us</span>
+                            <span id="us-price" class="text-blue-600 font-semibold">৳1,800/yr</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium">.uk</span>
+                            <span id="uk-price" class="text-blue-600 font-semibold">৳1,600/yr</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium">.ae</span>
+                            <span id="ae-price" class="text-blue-600 font-semibold">৳3,000/yr</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business TLDs -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Business Domains</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium">.biz</span>
+                            <span id="biz-price" class="text-blue-600 font-semibold">৳1,500/yr</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium">.co</span>
+                            <span id="co-price" class="text-blue-600 font-semibold">৳2,200/yr</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium">.io</span>
+                            <span id="io-price" class="text-blue-600 font-semibold">৳4,500/yr</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium">.tech</span>
+                            <span id="tech-price" class="text-blue-600 font-semibold">৳3,500/yr</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SSL Certificates Section -->
+        <div class="max-w-6xl mx-auto mb-16">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">SSL Certificate Plans</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- DV SSL -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+                    <div class="p-8">
+                        <div class="flex justify-center mb-6">
+                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
+                                <svg class="w-8 h-8 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.623 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center text-gray-900 mb-2">Domain Validated (DV)</h3>
+                        <div class="text-center mb-6">
+                            <span id="dv-ssl-price" class="text-3xl font-bold text-gray-900">৳1,500</span>
+                            <span class="text-gray-500">/year</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">256-bit Encryption</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">Single Domain</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">5 Minutes Validation</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">Auto Installation</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">Auto Renewal</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                        <button class="ssl-buy-btn block w-full text-center bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-green-700 hover:shadow-md" data-type="DV SSL" data-price="1500">
+                            Buy DV SSL &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- OV SSL -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden ring-2 ring-blue-600 relative">
+                    <div class="absolute top-0 right-0 -mt-3 mr-3">
+                        <span class="inline-flex items-center rounded-full bg-blue-600 px-3 py-1 text-sm font-medium text-white shadow-lg">POPULAR</span>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-center mb-6">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                                <svg class="w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.623 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center text-gray-900 mb-2">Organization Validated (OV)</h3>
+                        <div class="text-center mb-6">
+                            <span id="ov-ssl-price" class="text-3xl font-bold text-gray-900">৳4,500</span>
+                            <span class="text-gray-500">/year</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">256-bit Encryption</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">Organization Verified</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">1-3 Days Validation</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">$250K Warranty</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">Trust Seal</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                        <button class="ssl-buy-btn block w-full text-center bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-md" data-type="OV SSL" data-price="4500">
+                            Buy OV SSL &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- EV SSL -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+                    <div class="p-8">
+                        <div class="flex justify-center mb-6">
+                            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center">
+                                <svg class="w-8 h-8 text-purple-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.623 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center text-gray-900 mb-2">Extended Validation (EV)</h3>
+                        <div class="text-center mb-6">
+                            <span id="ev-ssl-price" class="text-3xl font-bold text-gray-900">৳12,000</span>
+                            <span class="text-gray-500">/year</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">256-bit Encryption</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">Green Address Bar</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">7-10 Days Validation</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">$1.75M Warranty</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span class="text-gray-700">Maximum Trust</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                        <button class="ssl-buy-btn block w-full text-center bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-purple-700 hover:shadow-md" data-type="EV SSL" data-price="12000">
+                            Buy EV SSL &rarr;
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SSL Vendors Section -->
+        <div class="max-w-6xl mx-auto mb-16">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">Trusted SSL Certificate Vendors</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Comodo -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 text-center">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-red-600 font-bold text-lg">C</span>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Comodo SSL</h3>
+                    <p class="text-sm text-gray-600">Industry leader with 99.9% browser compatibility</p>
+                </div>
+
+                <!-- DigiCert -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-blue-600 font-bold text-lg">D</span>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">DigiCert</h3>
+                    <p class="text-sm text-gray-600">Premium certificates with highest security standards</p>
+                </div>
+
+                <!-- Let's Encrypt -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-green-600 font-bold text-lg">L</span>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Let's Encrypt</h3>
+                    <p class="text-sm text-gray-600">Free automated SSL certificates with auto-renewal</p>
+                </div>
+
+                <!-- Sectigo -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-purple-600 font-bold text-lg">S</span>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Sectigo</h3>
+                    <p class="text-sm text-gray-600">Affordable SSL with comprehensive validation</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+        <div id="site-footer"></div>
+
+    <!-- Domain & SSL Script -->
+    <script>
+        const domainPricing = {
+            'bd': {
+                currency: '৳',
+                domains: {
+                    '.com': '1,200', '.net': '1,400', '.org': '1,300', '.info': '1,100',
+                    '.bd': '2,500', '.us': '1,800', '.uk': '1,600', '.ae': '3,000',
+                    '.biz': '1,500', '.co': '2,200', '.io': '4,500', '.tech': '3,500'
+                },
+                ssl: { dv: '1,500', ov: '4,500', ev: '12,000' }
+            },
+            'uae': {
+                currency: 'AED ',
+                domains: {
+                    '.com': '29', '.net': '35', '.org': '32', '.info': '27',
+                    '.bd': '62', '.us': '45', '.uk': '40', '.ae': '75',
+                    '.biz': '37', '.co': '55', '.io': '112', '.tech': '87'
+                },
+                ssl: { dv: '37', ov: '112', ev: '300' }
+            },
+            'eu': {
+                currency: '€',
+                domains: {
+                    '.com': '9.99', '.net': '12.99', '.org': '11.99', '.info': '8.99',
+                    '.bd': '21.99', '.us': '15.99', '.uk': '13.99', '.ae': '26.99',
+                    '.biz': '12.99', '.co': '19.99', '.io': '39.99', '.tech': '31.99'
+                },
+                ssl: { dv: '12.99', ov: '39.99', ev: '109.99' }
+            },
+            'us': {
+                currency: '$',
+                domains: {
+                    '.com': '8.99', '.net': '11.99', '.org': '10.99', '.info': '7.99',
+                    '.bd': '19.99', '.us': '14.99', '.uk': '12.99', '.ae': '24.99',
+                    '.biz': '11.99', '.co': '17.99', '.io': '35.99', '.tech': '28.99'
+                },
+                ssl: { dv: '11.99', ov: '35.99', ev: '99.99' }
+            },
+            'asia': {
+                currency: '$',
+                domains: {
+                    '.com': '7.99', '.net': '10.99', '.org': '9.99', '.info': '6.99',
+                    '.bd': '17.99', '.us': '12.99', '.uk': '11.99', '.ae': '22.99',
+                    '.biz': '10.99', '.co': '15.99', '.io': '31.99', '.tech': '25.99'
+                },
+                ssl: { dv: '9.99', ov: '29.99', ev: '89.99' }
+            },
+            'africa': {
+                currency: '$',
+                domains: {
+                    '.com': '9.50', '.net': '12.50', '.org': '11.50', '.info': '8.50',
+                    '.bd': '21.50', '.us': '15.50', '.uk': '13.50', '.ae': '26.50',
+                    '.biz': '12.50', '.co': '18.50', '.io': '37.50', '.tech': '30.50'
+                },
+                ssl: { dv: '12.50', ov: '37.50', ev: '105.50' }
+            }
+        };
+
+        let currentRegion = 'bd';
+
+        function showRegion(regionKey) {
+            currentRegion = regionKey;
+            const regionData = domainPricing[regionKey];
+            const currency = regionData.currency;
+
+            // Update domain prices
+            Object.keys(regionData.domains).forEach(tld => {
+                const element = document.getElementById(tld.replace('.', '') + '-price');
+                if (element) {
+                    element.textContent = currency + regionData.domains[tld] + '/yr';
+                }
+            });
+
+            // Update SSL prices
+            document.getElementById('dv-ssl-price').textContent = currency + regionData.ssl.dv;
+            document.getElementById('ov-ssl-price').textContent = currency + regionData.ssl.ov;
+            document.getElementById('ev-ssl-price').textContent = currency + regionData.ssl.ev;
+
+            // Update region buttons
+            document.querySelectorAll('.region-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(`btn-${regionKey}`).classList.add('active');
+        }
+
+        // Domain search functionality
+        document.getElementById('search-btn').addEventListener('click', function() {
+            const domain = document.getElementById('domain-search').value.trim();
+            if (!domain) {
+                alert('Please enter a domain name');
+                return;
+            }
+
+            const resultsDiv = document.getElementById('search-results');
+            const domainResults = document.getElementById('domain-results');
+            
+            resultsDiv.classList.remove('hidden');
+            
+            // Simulate domain search results
+            const tlds = ['.com', '.net', '.org', '.info', '.biz', '.co'];
+            const regionData = domainPricing[currentRegion];
+            
+            domainResults.innerHTML = tlds.map(tld => {
+                const fullDomain = domain.replace(/\.(com|net|org|info|biz|co|io|tech)$/i, '') + tld;
+                const price = regionData.domains[tld] || '0';
+                const available = Math.random() > 0.3; // 70% chance available
+                
+                return `
+                    <div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg ${available ? 'bg-green-50' : 'bg-red-50'}">
+                        <div class="flex items-center">
+                            <span class="font-medium">${fullDomain}</span>
+                            <span class="ml-2 px-2 py-1 text-xs rounded-full ${available ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}">
+                                ${available ? 'Available' : 'Taken'}
+                            </span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="font-semibold text-blue-600">${regionData.currency}${price}/yr</span>
+                            ${available ? `<button class="domain-buy-btn bg-blue-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700" data-domain="${fullDomain}" data-price="${price}">Register</button>` : ''}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            // Add event listeners to register buttons
+            document.querySelectorAll('.domain-buy-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const domain = this.dataset.domain;
+                    const price = this.dataset.price;
+                    
+                    const domainItem = {
+                        id: 'domain-' + Date.now(),
+                        name: `Domain Registration: ${domain}`,
+                        type: 'Domain Registration',
+                        region: currentRegion,
+                        price: domainPricing[currentRegion].currency + price + '/yr'
+                    };
+                    
+                    basket.addItem(domainItem);
+                });
+            });
+        });
+
+        // SSL buy buttons
+        document.querySelectorAll('.ssl-buy-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const sslType = this.dataset.type;
+                const price = this.dataset.price;
+                
+                const sslItem = {
+                    id: 'ssl-' + Date.now(),
+                    name: `SSL Certificate: ${sslType}`,
+                    type: 'SSL Certificate',
+                    region: currentRegion,
+                    price: domainPricing[currentRegion].currency + domainPricing[currentRegion].ssl[sslType.toLowerCase().replace(' ssl', '')] + '/yr'
+                };
+                
+                basket.addItem(sslItem);
+            });
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            showRegion('bd');
+        });
+    </script>
+
+    <script src="js/components.js"></script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,733 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shared Hosting Plans - BAR & Associates</title> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/basket.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .region-btn.active {
+            background-color: #2563EB;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased" data-page="services" data-service="shared-host">
+
+    <div id="site-nav"></div>
+ 
+    <!-- Container for pricing content -->
+    <div class="container mx-auto px-4 py-12 md:py-20">
+
+        <!-- Header -->
+        <header class="text-center max-w-3xl mx-auto mb-12">
+            <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+                🌍 Global Shared Hosting
+            </h1>
+            <p class="text-lg text-gray-600">
+                Choose the best plan for your website. Pricing optimized for competition in BDIX, UAE, EU, US, and Africa.
+            </p>
+        </header>
+
+        <!-- Region Switcher -->
+        <nav class="flex flex-wrap justify-center gap-2 mb-12">
+            <button id="btn-bd" class="region-btn active text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('bd')">
+                🇧🇩 Bangladesh (BDIX)
+            </button>
+            <button id="btn-uae" class="region-btn text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('uae')">
+                Middle East
+            </button>
+            <button id="btn-eu" class="region-btn text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('eu')">
+                🇪🇺 Europe
+            </button>
+            <button id="btn-us" class="region-btn text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('us')">
+                🇺🇸 United States
+            </button>
+            <button id="btn-asia" class="region-btn text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('asia')">
+                🌏 Asia
+            </button>
+            <button id="btn-africa" class="region-btn text-sm md:text-base font-medium py-2 px-4 rounded-full transition-colors duration-200 border border-gray-300 bg-white hover:bg-gray-100" onclick="showRegion('africa')">
+                🌍 Africa
+            </button>
+        </nav>
+
+        <!-- Pricing Grid -->
+        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <!-- Plan 1: Solo -->
+            <div id="plan-0" class="plan-card flex flex-col bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-xl">
+                <div class="p-8 flex-grow">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A1.5 1.5 0 0 1 18 21.75H6a1.5 1.5 0 0 1-1.499-1.632Z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h2 id="plan-0-name" class="text-2xl font-semibold text-center text-gray-900 mb-2">BDIX Solo</h2>
+                    <p class="text-center text-green-600 font-medium mb-4">25% Save</p>
+                    <div class="text-center mb-6">
+                        <span id="plan-0-price" class="text-5xl font-bold text-gray-900">৳99</span>
+                        <span id="plan-0-currency" class="text-gray-500">/mo</span>
+                    </div>
+                    <ul id="plan-0-features" class="space-y-3 mb-8">
+                    </ul>
+                </div>
+                <div class="p-6 bg-gray-50">
+                    <a href="#" class="block w-full text-center bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-md">
+                        Choose Plan &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <!-- Plan 2: Infinity -->
+            <div id="plan-1" class="plan-card flex flex-col bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-xl">
+                <div class="p-8 flex-grow">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A9.065 9.065 0 0 1 6 18.719m12 0a9.065 9.065 0 0 0-6-2.201m-6 2.201a9.065 9.065 0 0 1-3.741-.479 3 3 0 0 1 4.682-2.72M12 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm6 0a9.065 9.065 0 0 1-3.741.479 3 3 0 0 1-4.682 2.72m.94-3.198-.001-.031c0-.225.012-.447.037-.666A11.944 11.944 0 0 0 12 9c2.17 0 4.207.576 5.963 1.584A9.065 9.065 0 0 0 18 12.281Z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h2 id="plan-1-name" class="text-2xl font-semibold text-center text-gray-900 mb-2">BDIX Infinity</h2>
+                    <p class="text-center text-green-600 font-medium mb-4">25% Save</p>
+                    <div class="text-center mb-6">
+                        <span id="plan-1-price" class="text-5xl font-bold text-gray-900">৳199</span>
+                        <span id="plan-1-currency" class="text-gray-500">/mo</span>
+                    </div>
+                    <ul id="plan-1-features" class="space-y-3 mb-8">
+                    </ul>
+                </div>
+                <div class="p-6 bg-gray-50">
+                    <a href="#" class="block w-full text-center bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-md">
+                        Choose Plan &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <!-- Plan 3: Pro -->
+            <div id="plan-2" class="plan-card flex flex-col bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-xl ring-2 ring-blue-600 relative">
+                <div class="absolute top-0 right-0 -mt-3 mr-3">
+                    <span class="inline-flex items-center rounded-full bg-blue-600 px-3 py-1 text-sm font-medium text-white shadow-lg">
+                        POPULAR
+                    </span>
+                </div>
+                <div class="p-8 flex-grow">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.07a2.25 2.25 0 0 1-2.25 2.25H5.625a2.25 2.25 0 0 1-2.25-2.25v-4.07m16.5 0v-3.87a2.25 2.25 0 0 0-2.25-2.25H5.625a2.25 2.25 0 0 0-2.25 2.25v3.87m16.5 0c.621 0 1.125-.504 1.125-1.125V8.25c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v4.77c0 .621.504 1.125 1.125 1.125m16.5 0v-3.87a2.25 2.25 0 0 0-2.25-2.25H5.625a2.25 2.25 0 0 0-2.25 2.25v3.87m16.5 0c.621 0 1.125-.504 1.125-1.125V8.25c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v4.77c0 .621.504 1.125 1.125 1.125" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h2 id="plan-2-name" class="text-2xl font-semibold text-center text-gray-900 mb-2">BDIX Pro</h2>
+                    <p class="text-center text-green-600 font-medium mb-4">25% Save</p>
+                    <div class="text-center mb-6">
+                        <span id="plan-2-price" class="text-5xl font-bold text-gray-900">৳349</span>
+                        <span id="plan-2-currency" class="text-gray-500">/mo</span>
+                    </div>
+                    <ul id="plan-2-features" class="space-y-3 mb-8">
+                    </ul>
+                </div>
+                <div class="p-6 bg-gray-50">
+                    <a href="#" class="block w-full text-center bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-md">
+                        Choose Plan &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <!-- Plan 4: Business -->
+            <div id="plan-3" class="plan-card flex flex-col bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-xl">
+                <div class="p-8 flex-grow">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h2 id="plan-3-name" class="text-2xl font-semibold text-center text-gray-900 mb-2">BDIX Business</h2>
+                    <p class="text-center text-green-600 font-medium mb-4">25% Save</p>
+                    <div class="text-center mb-6">
+                        <span id="plan-3-price" class="text-5xl font-bold text-gray-900">৳699</span>
+                        <span id="plan-3-currency" class="text-gray-500">/mo</span>
+                    </div>
+                    <ul id="plan-3-features" class="space-y-3 mb-8">
+                    </ul>
+                </div>
+                <div class="p-6 bg-gray-50">
+                    <a href="#" class="block w-full text-center bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-md">
+                        Choose Plan &rarr;
+                    </a>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Custom Plan Builder -->
+        <div class="max-w-7xl mx-auto px-4 py-8 sm:py-12">
+            <div class="text-center mb-6 sm:mb-8">
+                <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-2">🛠️ Build Your Custom Shared Hosting Plan</h2>
+                <p class="text-sm sm:text-base text-gray-600">Configure resources according to your specific needs</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Custom Resources -->
+                <div class="lg:col-span-2">
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-4 sm:p-6">
+                        <h3 class="text-base sm:text-lg font-semibold text-gray-900 mb-4 sm:mb-6">Configure Resources</h3>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                            <!-- SSD Storage -->
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">SSD Storage</label>
+                                <div class="flex items-center space-x-2">
+                                    <input type="range" id="ssd-range" min="1" max="100" value="5" class="flex-1">
+                                    <input type="number" id="ssd-input" min="1" max="100" value="5" class="w-16 px-2 py-1 text-sm border border-gray-300 rounded">
+                                    <span class="text-sm font-medium w-8">GB</span>
+                                </div>
+                                <div class="text-xs text-gray-500">Base: 1GB, Price: ৳10/GB</div>
+                            </div>
+
+                            <!-- Bandwidth -->
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Bandwidth</label>
+                                <div class="flex items-center space-x-2">
+                                    <input type="range" id="bandwidth-range" min="10" max="1000" value="50" step="10" class="flex-1">
+                                    <input type="number" id="bandwidth-input" min="10" max="1000" value="50" step="10" class="w-16 px-2 py-1 text-sm border border-gray-300 rounded">
+                                    <span class="text-sm font-medium w-8">GB</span>
+                                </div>
+                                <div class="text-xs text-gray-500">Base: 10GB, Price: ৳2/10GB</div>
+                            </div>
+
+                            <!-- Websites -->
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Number of Websites</label>
+                                <div class="flex items-center space-x-2">
+                                    <input type="range" id="websites-range" min="1" max="20" value="1" class="flex-1">
+                                    <input type="number" id="websites-input" min="1" max="20" value="1" class="w-16 px-2 py-1 text-sm border border-gray-300 rounded">
+                                    <span class="text-sm font-medium w-12">Sites</span>
+                                </div>
+                                <div class="text-xs text-gray-500">Base: 1 Site, Price: ৳25/Site</div>
+                            </div>
+
+                            <!-- Email Accounts -->
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Email Accounts</label>
+                                <div class="flex items-center space-x-2">
+                                    <input type="range" id="email-range" min="1" max="100" value="5" step="5" class="flex-1">
+                                    <input type="number" id="email-input" min="1" max="100" value="5" step="5" class="w-16 px-2 py-1 text-sm border border-gray-300 rounded">
+                                    <span class="text-sm font-medium w-12">Acc</span>
+                                </div>
+                                <div class="text-xs text-gray-500">Base: 1 Account, Price: ৳5/Account</div>
+                            </div>
+
+                            <!-- Mailbox Size -->
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Mailbox Size (per account)</label>
+                                <div class="flex items-center space-x-2">
+                                    <input type="range" id="mailbox-range" min="100" max="5000" value="500" step="100" class="flex-1">
+                                    <input type="number" id="mailbox-input" min="100" max="5000" value="500" step="100" class="w-16 px-2 py-1 text-sm border border-gray-300 rounded">
+                                    <span class="text-sm font-medium w-8">MB</span>
+                                </div>
+                                <div class="text-xs text-gray-500">Base: 100MB, Price: ৳1/100MB</div>
+                            </div>
+                        </div>
+
+                        <!-- Feature Checkboxes -->
+                        <div class="mt-6 sm:mt-8">
+                            <h4 class="text-sm sm:text-md font-medium text-gray-900 mb-3 sm:mb-4">Additional Features</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+                                <div class="space-y-3">
+                                    <label class="flex items-center space-x-3 p-2 sm:p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="ssl-cert" class="custom-feature" data-price="0">
+                                        <span class="flex-1 text-sm sm:text-base">Free SSL Certificate</span>
+                                        <span class="text-green-600 font-medium text-sm sm:text-base">Free</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-2 sm:p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="mysql-db" class="custom-feature" data-price="20">
+                                        <span class="flex-1 text-sm sm:text-base">MySQL Database</span>
+                                        <span class="text-blue-600 font-medium text-sm sm:text-base">৳20</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-2 sm:p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="cpanel-access" class="custom-feature" data-price="40">
+                                        <span class="flex-1 text-sm sm:text-base">cPanel Access</span>
+                                        <span class="text-blue-600 font-medium text-sm sm:text-base">৳40</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-2 sm:p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="malware-scan" class="custom-feature" data-price="60">
+                                        <span class="flex-1 text-sm sm:text-base">Malware Scanning</span>
+                                        <span class="text-blue-600 font-medium text-sm sm:text-base">৳60</span>
+                                    </label>
+                                </div>
+                                <div class="space-y-3">
+                                    <label class="flex items-center space-x-3 p-2 sm:p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="speed-boost" class="custom-feature" data-price="30">
+                                        <span class="flex-1 text-sm sm:text-base">Speed Boost</span>
+                                        <span class="text-blue-600 font-medium text-sm sm:text-base">৳30</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-2 sm:p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="daily-backup" class="custom-feature" data-price="50">
+                                        <span class="flex-1 text-sm sm:text-base">Daily Backup</span>
+                                        <span class="text-blue-600 font-medium text-sm sm:text-base">৳50</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-2 sm:p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="cdn-service" class="custom-feature" data-price="80">
+                                        <span class="flex-1 text-sm sm:text-base">CDN Service</span>
+                                        <span class="text-blue-600 font-medium text-sm sm:text-base">৳80</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 p-2 sm:p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                        <input type="checkbox" id="priority-support" class="custom-feature" data-price="100">
+                                        <span class="flex-1 text-sm sm:text-base">24/7 Priority Support</span>
+                                        <span class="text-blue-600 font-medium text-sm sm:text-base">৳100</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Plan Summary -->
+                <div>
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-4 sm:p-6 lg:sticky lg:top-24">
+                        <h4 class="text-base sm:text-lg font-semibold text-gray-900 mb-3 sm:mb-4">Custom Plan Summary</h4>
+                        
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span>SSD Storage:</span>
+                                <span id="summary-ssd" class="font-medium">5 GB</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Bandwidth:</span>
+                                <span id="summary-bandwidth" class="font-medium">50 GB</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Websites:</span>
+                                <span id="summary-websites" class="font-medium">1 Site</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Email Accounts:</span>
+                                <span id="summary-emails" class="font-medium">5 Accounts</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Mailbox Size:</span>
+                                <span id="summary-mailbox" class="font-medium">500 MB</span>
+                            </div>
+                        </div>
+
+                        <hr class="my-4">
+                        
+                        <div id="custom-features-list" class="space-y-2 text-sm">
+                            <div class="text-gray-500 text-center">No additional features selected</div>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-sm">
+                                <span>Base Resources:</span>
+                                <span id="base-cost" class="font-medium">৳0</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span>Additional Features:</span>
+                                <span id="features-cost" class="font-medium">৳0</span>
+                            </div>
+                            <div class="flex justify-between items-center pt-2 border-t">
+                                <span class="font-semibold">Monthly Total:</span>
+                                <span id="custom-total" class="font-bold text-lg text-blue-600">৳0</span>
+                            </div>
+                        </div>
+
+                        <button id="addCustomHosting" class="w-full bg-blue-600 text-white py-2 sm:py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors mt-4 sm:mt-6 text-sm sm:text-base">
+                            Add Custom Plan to Basket
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="site-footer"></div>
+
+    <!-- Pricing Page Script -->
+    <script>
+        const planData = {
+            'bd': {
+                currency: '৳',
+                currencyCode: 'BDT',
+                plans: [
+                    { name: 'BDIX Solo', price: '99', features: ['2 GB SSD', '50 GB Bandwidth', '1 Website', '1 Email', 'Speed Boost', 'Free SSL', 'Daily Backup', 'cPanel', 'Email + MySQL', '99.9% Uptime', '24/7 Support'] },
+                    { name: 'BDIX Infinity', price: '199', features: ['5 GB SSD', '100 GB Bandwidth', '2 Websites', '5 Email', 'Speed Boost', 'Free SSL', 'Daily Backup', 'cPanel', 'Email + MySQL', '99.9% Uptime', '24/7 Support'] },
+                    { name: 'BDIX Pro', price: '349', features: ['10 GB SSD', '500 GB Bandwidth', '5 Websites', 'Unlimited Email', 'Speed Boost', 'Free SSL', 'Daily Backup', 'cPanel', 'Email + MySQL', '99.9% Uptime', '24/7 Support'] },
+                    { name: 'BDIX Business', price: '699', features: ['30 GB SSD', 'Unmetered Bandwidth', '10 Websites', 'Unlimited Email', 'Speed Boost', 'Free SSL', 'Daily Backup', 'cPanel', 'Email + MySQL', '99.9% Uptime', '24/7 Support'] }
+                ]
+            },
+            'uae': {
+                currency: 'AED ',
+                currencyCode: 'AED',
+                plans: [
+                    { name: 'UAE Solo', price: '4', features: ['2 GB SSD', '50 GB Bandwidth', '1 Website', '1 Email', 'Speed Boost', 'Free SSL', 'Daily Backup', 'cPanel', 'Email + MySQL', '99.9% Uptime', '24/7 Support'] },
+                    { name: 'UAE Infinity', price: '10', features: ['5 GB SSD', '100 GB Bandwidth', '2 Websites', '5 Email', 'Speed Boost', 'Free SSL', 'Daily Backup', 'cPanel', 'Email + MySQL', '99.9% Uptime', '24/7 Support'] },
+                    { name: 'UAE Pro', price: '18', features: ['10 GB SSD', '500 GB Bandwidth', '5 Websites', 'Unlimited Email', 'Speed Boost', 'Free SSL', 'Daily Backup', 'cPanel', 'Email + MySQL', '99.9% Uptime', '24/7 Support'] },
+                    { name: 'UAE Business', price: '35', features: ['30 GB SSD', 'Unlimited Bandwidth', '10 Websites', 'Unlimited Email', 'Speed Boost', 'Free SSL', 'Daily Backup', 'cPanel', 'Email + MySQL', '99.9% Uptime', '24/7 Support'] }
+                ]
+            },
+            'eu': {
+                currency: '€',
+                currencyCode: 'EUR',
+                plans: [
+                    { name: 'EU Solo', price: '1.49', features: ['2 GB SSD', '50 GB Bandwidth', '1 Website', '1 Email', 'Speed Boost', 'Free SSL', 'Daily Backup', 'cPanel', 'Email + MySQL', '99.9% Uptime', '24/7 Support'] },
+                    { name: 'EU Infinity', price: '2.99', features: ['5 GB SSD', '100 GB Bandwidth', '2 Websites', '5 Email', 'Speed Boost', 'Free SSL', 'Daily Backup', 'cPanel', 'Email + MySQL', '99.9% Uptime', '24/7 Support'] },
+                    { name: 'EU Pro', price: '5.99', features: ['10 GB SSD', '500 GB Bandwidth', '5 Websites', 'Unlimited Email', 'Speed Boost', 'Free SSL', 'Daily Backup', 'cPanel', 'Email + MySQL', '99.9% Uptime', '24/7 Support'] },
+                    { name: 'EU Business', price: '9.99', features: ['30 GB SSD', 'Unmetered Bandwidth', '10 Websites', 'Unlimited Email', 'Speed Boost', 'Free SSL', 'Daily Backup', 'cPanel', 'Email + MySQL', '99.9% Uptime', '24/7 Support'] }
+                ]
+            },
+            'us': {
+                currency: '$',
+                currencyCode: 'USD',
+                plans: [
+                    { name: 'US Solo', price: '0.99', features: ['2 GB SSD', '50 GB Bandwidth', '1 Website', '1 Email', 'Speed Boost', 'Free SSL', 'Daily Backup', 'cPanel', 'Email + MySQL', '99.9% Uptime', '24/7 Support'] },
+                    { name: 'US Infinity', price: '2.99', features: ['5 GB SSD', '100 GB Bandwidth', '2 Websites', '5 Email', 'Speed Boost', 'Free SSL', 'Daily Backup', 'cPanel', 'Email + MySQL', '99.9% Uptime', '24/7 Support'] },
+                    { name: 'US Pro', price: '5.79', features: ['10 GB SSD', '500 GB Bandwidth', '5 Websites', 'Unlimited Email', 'Speed Boost', 'Free SSL', 'Daily Backup', 'cPanel', 'Email + MySQL', '99.9% Uptime', '24/7 Support'] },
+                    { name: 'US Business', price: '10.59', features: ['30 GB SSD', 'Unmetered Bandwidth', '10 Websites', 'Unlimited Email', 'Speed Boost', 'Free SSL', 'Daily Backup', 'cPanel', 'Email + MySQL', '99.9% Uptime', '24/7 Support'] }
+                ]
+            },
+            'asia': {
+                currency: '$',
+                currencyCode: 'USD',
+                plans: [
+                    { name: 'Asia Solo', price: '0.89', features: ['2 GB SSD', '50 GB Bandwidth', '1 Website', '1 Email', 'Speed Boost', 'Free SSL', 'Daily Backup', 'cPanel', 'Email + MySQL', '99.9% Uptime', '24/7 Support'] },
+                    { name: 'Asia Infinity', price: '2.49', features: ['5 GB SSD', '100 GB Bandwidth', '2 Websites', '5 Email', 'Speed Boost', 'Free SSL', 'Daily Backup', 'cPanel', 'Email + MySQL', '99.9% Uptime', '24/7 Support'] },
+                    { name: 'Asia Pro', price: '4.99', features: ['10 GB SSD', '500 GB Bandwidth', '5 Websites', 'Unlimited Email', 'Speed Boost', 'Free SSL', 'Daily Backup', 'cPanel', 'Email + MySQL', '99.9% Uptime', '24/7 Support'] },
+                    { name: 'Asia Business', price: '8.99', features: ['30 GB SSD', 'Unmetered Bandwidth', '10 Websites', 'Unlimited Email', 'Speed Boost', 'Free SSL', 'Daily Backup', 'cPanel', 'Email + MySQL', '99.9% Uptime', '24/7 Support'] }
+                ]
+            },
+            'africa': {
+                currency: '$',
+                currencyCode: 'USD',
+                plans: [
+                    { name: 'Africa Solo', price: '1.49', features: ['2 GB SSD', '30 GB Bandwidth', '1 Website', '1 Email', 'Speed Boost', 'Free SSL', 'Daily Backup', 'cPanel', 'Email + MySQL', '99.9% Uptime', '24/7 Support'] },
+                    { name: 'Africa Infinity', price: '3.49', features: ['5 GB SSD', '75 GB Bandwidth', '2 Websites', '5 Email', 'Speed Boost', 'Free SSL', 'Daily Backup', 'cPanel', 'Email + MySQL', '99.9% Uptime', '24/7 Support'] },
+                    { name: 'Africa Pro', price: '6.29', features: ['10 GB SSD', '300 GB Bandwidth', '5 Websites', 'Unlimited Email', 'Speed Boost', 'Free SSL', 'Daily Backup', 'cPanel', 'Email + MySQL', '99.9% Uptime', '24/7 Support'] },
+                    { name: 'Africa Business', price: '11.99', features: ['30 GB SSD', 'Unmetered Bandwidth', '10 Websites', 'Unlimited Email', 'Speed Boost', 'Free SSL', 'Daily Backup', 'cPanel', 'Email + MySQL', '99.9% Uptime', '24/7 Support'] }
+                ]
+            }
+        };
+
+        function createFeatureHTML(feature) {
+            return `
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 text-green-500 mr-2.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-gray-700">${feature}</span>
+                </li>
+            `;
+        }
+
+        let currentRegion = 'bd';
+        let selectedPlan = null;
+        
+        function updateAddonPrices(regionKey) {
+            currentRegion = regionKey;
+            const regionData = planData[regionKey];
+            const currency = regionData.currency;
+            
+            document.querySelectorAll('.addon-checkbox').forEach(checkbox => {
+                const priceSpan = checkbox.closest('.flex').querySelector('.addon-price');
+                let price;
+                
+                switch(regionKey) {
+                    case 'bd':
+                        price = currency + checkbox.dataset.price;
+                        break;
+                    case 'uae':
+                        price = currency + checkbox.dataset.uae;
+                        break;
+                    case 'eu':
+                        price = currency + checkbox.dataset.eu;
+                        break;
+                    case 'us':
+                        price = currency + checkbox.dataset.us;
+                        break;
+                    case 'asia':
+                        price = currency + checkbox.dataset.us;
+                        break;
+                    case 'africa':
+                        price = currency + checkbox.dataset.us;
+                        break;
+                }
+                
+                if (priceSpan) {
+                    priceSpan.textContent = price;
+                }
+            });
+            
+            calculateAddonTotal();
+        }
+        
+        function calculateAddonTotal() {
+            let total = 0;
+            const regionData = planData[currentRegion];
+            const currency = regionData.currency;
+            
+            document.querySelectorAll('.addon-checkbox:checked').forEach(checkbox => {
+                let price;
+                
+                switch(currentRegion) {
+                    case 'bd':
+                        price = parseFloat(checkbox.dataset.price);
+                        break;
+                    case 'uae':
+                        price = parseFloat(checkbox.dataset.uae);
+                        break;
+                    case 'eu':
+                        price = parseFloat(checkbox.dataset.eu);
+                        break;
+                    case 'us':
+                        price = parseFloat(checkbox.dataset.us);
+                        break;
+                    case 'asia':
+                        price = parseFloat(checkbox.dataset.us);
+                        break;
+                    case 'africa':
+                        price = parseFloat(checkbox.dataset.us);
+                        break;
+                }
+                
+                total += price;
+            });
+            
+            const addonTotalEl = document.getElementById('addon-total');
+            if (addonTotalEl) {
+                addonTotalEl.textContent = currency + total.toFixed(2).replace('.00', '');
+            }
+        }
+
+        function showRegion(regionKey) {
+            const regionData = planData[regionKey];
+            if (!regionData) return;
+
+            regionData.plans.forEach((plan, index) => {
+                document.getElementById(`plan-${index}-name`).textContent = plan.name;
+                document.getElementById(`plan-${index}-price`).textContent = regionData.currency + plan.price;
+                
+                const featuresList = document.getElementById(`plan-${index}-features`);
+                featuresList.innerHTML = ''; 
+                plan.features.forEach(feature => {
+                    featuresList.innerHTML += createFeatureHTML(feature);
+                });
+            });
+
+            const buttons = document.querySelectorAll('.region-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            document.getElementById(`btn-${regionKey}`).classList.add('active');
+            
+            updateAddonPrices(regionKey);
+        }
+
+        function updateOrderSummary() {
+            const regionData = planData[currentRegion];
+            const currency = regionData.currency;
+            let total = 0;
+            const lines = [];
+            
+            if (selectedPlan) {
+                const planPrice = parseFloat(selectedPlan.price.replace(/[^0-9.]/g, ''));
+                total += planPrice;
+                lines.push(`<div class="flex justify-between"><span>${selectedPlan.name}</span><span>${currency}${planPrice}</span></div>`);
+            }
+            
+            document.querySelectorAll('.addon-checkbox:checked').forEach(checkbox => {
+                let price;
+                switch(currentRegion) {
+                    case 'bd': price = parseFloat(checkbox.dataset.price); break;
+                    case 'uae': price = parseFloat(checkbox.dataset.uae); break;
+                    case 'eu': price = parseFloat(checkbox.dataset.eu); break;
+                    case 'us': price = parseFloat(checkbox.dataset.us); break;
+                    case 'asia': price = parseFloat(checkbox.dataset.us); break;
+                    case 'africa': price = parseFloat(checkbox.dataset.us); break;
+                }
+                total += price;
+                lines.push(`<div class="flex justify-between"><span>${checkbox.nextElementSibling.textContent.split('৳')[0].trim()}</span><span>${currency}${price}</span></div>`);
+            });
+
+            const linesEl = document.getElementById('summary-lines');
+            const totalEl = document.getElementById('summary-total');
+            const regionEl = document.getElementById('summary-region');
+
+            if (!linesEl || !totalEl || !regionEl) {
+                return;
+            }
+            
+            linesEl.innerHTML = lines.length ? lines.join('') : '<div class="text-gray-500 text-center">Select services to see pricing</div>';
+            totalEl.textContent = currency + total;
+            regionEl.textContent = regionData.plans[0].name.split(' ')[0];
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showRegion('bd');
+            
+            document.querySelectorAll('.addon-checkbox').forEach(checkbox => {
+                checkbox.addEventListener('change', () => {
+                    calculateAddonTotal();
+                    updateOrderSummary();
+                });
+            });
+            
+            document.querySelectorAll('.plan-card').forEach((card) => {
+                card.addEventListener('click', () => {
+                    document.querySelectorAll('.plan-card').forEach(c => c.classList.remove('ring-2', 'ring-blue-500'));
+                    card.classList.add('ring-2', 'ring-blue-500');
+                    selectedPlan = {
+                        name: card.querySelector('h2').textContent,
+                        price: card.querySelector('[id$="-price"]').textContent
+                    };
+                    updateOrderSummary();
+                });
+            });
+
+            function updateCustomPlan() {
+                const regionData = planData[currentRegion];
+                const currency = regionData.currency;
+                
+                const ssd = parseInt(document.getElementById('ssd-range').value);
+                const bandwidth = parseInt(document.getElementById('bandwidth-range').value);
+                const websites = parseInt(document.getElementById('websites-range').value);
+                const emails = parseInt(document.getElementById('email-range').value);
+                const mailbox = parseInt(document.getElementById('mailbox-range').value);
+                
+                if (document.getElementById('ssd-input').value != ssd) {
+                    document.getElementById('ssd-input').value = ssd;
+                }
+                if (document.getElementById('bandwidth-input').value != bandwidth) {
+                    document.getElementById('bandwidth-input').value = bandwidth;
+                }
+                if (document.getElementById('websites-input').value != websites) {
+                    document.getElementById('websites-input').value = websites;
+                }
+                if (document.getElementById('email-input').value != emails) {
+                    document.getElementById('email-input').value = emails;
+                }
+                if (document.getElementById('mailbox-input').value != mailbox) {
+                    document.getElementById('mailbox-input').value = mailbox;
+                }
+                
+                document.getElementById('summary-ssd').textContent = ssd + ' GB';
+                document.getElementById('summary-bandwidth').textContent = bandwidth + ' GB';
+                document.getElementById('summary-websites').textContent = websites + (websites === 1 ? ' Site' : ' Sites');
+                document.getElementById('summary-emails').textContent = emails + ' Accounts';
+                document.getElementById('summary-mailbox').textContent = mailbox + ' MB';
+                
+                let baseCost = 100;
+                baseCost += (ssd - 1) * 10;
+                baseCost += Math.max(0, (bandwidth - 10) / 10) * 2;
+                baseCost += (websites - 1) * 25;
+                baseCost += (emails - 1) * 5;
+                baseCost += Math.max(0, (mailbox - 100) / 100) * 1;
+                
+                let featuresCost = 0;
+                const featuresList = [];
+                document.querySelectorAll('.custom-feature:checked').forEach(feature => {
+                    const price = parseInt(feature.dataset.price);
+                    featuresCost += price;
+                    const label = feature.parentElement.querySelector('span').textContent;
+                    if (price > 0) {
+                        featuresList.push(`<div class="flex justify-between"><span>${label}</span><span>${currency}${price}</span></div>`);
+                    } else {
+                        featuresList.push(`<div class="flex justify-between"><span>${label}</span><span class="text-green-600">Free</span></div>`);
+                    }
+                });
+                
+                document.getElementById('base-cost').textContent = currency + baseCost;
+                document.getElementById('features-cost').textContent = currency + featuresCost;
+                document.getElementById('custom-total').textContent = currency + (baseCost + featuresCost);
+                
+                const featuresListEl = document.getElementById('custom-features-list');
+                if (featuresList.length > 0) {
+                    featuresListEl.innerHTML = featuresList.join('');
+                } else {
+                    featuresListEl.innerHTML = '<div class="text-gray-500 text-center">No additional features selected</div>';
+                }
+            }
+
+            document.querySelectorAll('#ssd-range, #bandwidth-range, #websites-range, #email-range, #mailbox-range').forEach(slider => {
+                slider.addEventListener('input', updateCustomPlan);
+            });
+            
+            document.getElementById('ssd-input').addEventListener('input', function() {
+                document.getElementById('ssd-range').value = this.value;
+                updateCustomPlan();
+            });
+            document.getElementById('bandwidth-input').addEventListener('input', function() {
+                document.getElementById('bandwidth-range').value = this.value;
+                updateCustomPlan();
+            });
+            document.getElementById('websites-input').addEventListener('input', function() {
+                document.getElementById('websites-range').value = this.value;
+                updateCustomPlan();
+            });
+            document.getElementById('email-input').addEventListener('input', function() {
+                document.getElementById('email-range').value = this.value;
+                updateCustomPlan();
+            });
+            document.getElementById('mailbox-input').addEventListener('input', function() {
+                document.getElementById('mailbox-range').value = this.value;
+                updateCustomPlan();
+            });
+            
+            document.querySelectorAll('.custom-feature').forEach(checkbox => {
+                checkbox.addEventListener('change', updateCustomPlan);
+            });
+            
+            // Auto-sort features by price (free items first)
+            function sortFeaturesByPrice() {
+                const containers = document.querySelectorAll('.grid.grid-cols-1.md\\:grid-cols-2 .space-y-3');
+                containers.forEach(container => {
+                    const labels = Array.from(container.querySelectorAll('label'));
+                    labels.sort((a, b) => {
+                        const priceA = parseInt(a.querySelector('input').dataset.price || '0');
+                        const priceB = parseInt(b.querySelector('input').dataset.price || '0');
+                        return priceA - priceB;
+                    });
+                    labels.forEach(label => container.appendChild(label));
+                });
+            }
+            sortFeaturesByPrice();
+            
+            document.getElementById('addCustomHosting').addEventListener('click', () => {
+                const customHostingPlan = {
+                    id: 'custom-hosting-' + Date.now(),
+                    name: 'Custom Shared Hosting Plan',
+                    type: 'Custom Shared Hosting',
+                    region: currentRegion,
+                    price: document.getElementById('custom-total').textContent
+                };
+                
+                basket.addItem(customHostingPlan);
+            });
+            
+            updateCustomPlan();
+            
+            // Re-sort when region changes
+            const originalShowRegion = window.showRegion;
+            window.showRegion = function(regionKey) {
+                originalShowRegion(regionKey);
+                setTimeout(sortFeaturesByPrice, 10);
+            };
+        });
+    </script>
+
+    <script src="js/components.js"></script>
+
+</body>
+</html>
+
+
+
